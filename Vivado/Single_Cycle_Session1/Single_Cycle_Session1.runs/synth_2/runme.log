@@ -1,0 +1,1259 @@
+
+*** Running vivado
+    with args -log MIPS_single_cycle.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source MIPS_single_cycle.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source MIPS_single_cycle.tcl -notrace
+Command: synth_design -top MIPS_single_cycle -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12444 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 414.980 ; gain = 96.027
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'MIPS_single_cycle' [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/TOP.sv:1]
+	Parameter depth bound to: 1024 - type: integer 
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pc_reg' [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/PC_reg.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'pc_reg' (1#1) [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/PC_reg.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'ram_memory' [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/RAM_memory.sv:1]
+	Parameter depth bound to: 1024 - type: integer 
+	Parameter width bound to: 8 - type: integer 
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "mem_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'ram_memory' (2#1) [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/RAM_memory.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'ctrl_unit' [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/Control_Unit.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'ctrl_unit' (3#1) [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/Control_Unit.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/reg_file.sv:1]
+INFO: [Synth 8-6085] Hierarchical reference on 'register_file' stops possible memory inference [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/reg_file.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (4#1) [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/reg_file.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/ALU.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (5#1) [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/ALU.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_extend' [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/sign_extender.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend' (6#1) [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/sign_extender.sv:1]
+INFO: [Synth 8-6085] Hierarchical reference on 'register_file' stops possible memory inference [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/reg_file.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'MIPS_single_cycle' (7#1) [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/TOP.sv:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 676.449 ; gain = 357.496
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 676.449 ; gain = 357.496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 676.449 ; gain = 357.496
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/CompArch/Vivado/Single_Cycle_Session1/Single_Cycle_Session1.srcs/constrs_1/imports/Vivado/ZYBO_Master.xdc]
+Finished Parsing XDC File [F:/CompArch/Vivado/Single_Cycle_Session1/Single_Cycle_Session1.srcs/constrs_1/imports/Vivado/ZYBO_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/CompArch/Vivado/Single_Cycle_Session1/Single_Cycle_Session1.srcs/constrs_1/imports/Vivado/ZYBO_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/MIPS_single_cycle_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/MIPS_single_cycle_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1100.352 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1100.352 ; gain = 781.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1100.352 ; gain = 781.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1100.352 ; gain = 781.398
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "mem_to_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "branch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_write" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "alu_op" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "alu_src" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "reg_dst" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "reg_write" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "jump" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/ALU.sv:11]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:11 ; elapsed = 00:01:17 . Memory (MB): peak = 1100.352 ; gain = 781.398
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------+------------+----------+
+|      |RTL Partition          |Replication |Instances |
++------+-----------------------+------------+----------+
+|1     |ram_memory__GBM0       |           1|     35683|
+|2     |ram_memory__GBM1       |           1|     12421|
+|3     |ram_memory__GBM2       |           1|     14901|
+|4     |ram_memory__GBM3       |           1|     18365|
+|5     |ram_memory__GBM4       |           1|     22697|
+|6     |ram_memory__GBM5       |           1|     28748|
+|7     |MIPS_single_cycle__GC0 |           1|     10328|
++------+-----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 33    
+	                8 Bit    Registers := 2048  
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 42    
+	   6 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2040  
+	   4 Input      8 Bit        Muxes := 1144  
+	   2 Input      5 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 120   
+	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2036  
+	   5 Input      1 Bit        Muxes := 1536  
+	   4 Input      1 Bit        Muxes := 512   
+	   7 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module MIPS_single_cycle 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 1     
+Module ram_memory 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1024  
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1020  
+	   4 Input      8 Bit        Muxes := 572   
+	   4 Input      2 Bit        Muxes := 60    
+	   2 Input      1 Bit        Muxes := 1018  
+	   5 Input      1 Bit        Muxes := 768   
+	   4 Input      1 Bit        Muxes := 256   
+Module pc_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module ctrl_unit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      3 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 7     
+Module register_file 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 39    
+Module alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   6 Input     32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Control_unit/alu_op" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:52 ; elapsed = 00:02:22 . Memory (MB): peak = 1100.352 ; gain = 781.398
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------+------------+----------+
+|      |RTL Partition          |Replication |Instances |
++------+-----------------------+------------+----------+
+|1     |ram_memory__GBM0       |           2|     26259|
+|2     |ram_memory__GBM1       |           2|      3095|
+|3     |ram_memory__GBM2       |           2|      3773|
+|4     |ram_memory__GBM3       |           2|      4233|
+|5     |ram_memory__GBM4       |           2|      5024|
+|6     |ram_memory__GBM5       |           2|      6321|
+|7     |MIPS_single_cycle__GC0 |           1|      5162|
++------+-----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:00 ; elapsed = 00:02:32 . Memory (MB): peak = 1100.352 ; gain = 781.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1021][1] )
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[1][0]' (FDE) to 'Instr_memi_6/mem_reg[2][1]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[1][1]' (FDE) to 'Instr_memi_6/mem_reg[1][2]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[1][2]' (FDE) to 'Instr_memi_6/mem_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[1][3]' (FDE) to 'Instr_memi_6/mem_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[1][4]' (FDE) to 'Instr_memi_6/mem_reg[1][5]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[1][5]' (FDE) to 'Instr_memi_6/mem_reg[1][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[1][6]' (FDE) to 'Instr_memi_6/mem_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[1][7]' (FDE) to 'Instr_memi_6/mem_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[2][0]' (FDE) to 'Instr_memi_6/mem_reg[2][2]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[2][2]' (FDE) to 'Instr_memi_6/mem_reg[2][3]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[2][3]' (FDE) to 'Instr_memi_6/mem_reg[2][4]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[2][4]' (FDE) to 'Instr_memi_6/mem_reg[2][5]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[2][5]' (FDE) to 'Instr_memi_6/mem_reg[2][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[2][6]' (FDE) to 'Instr_memi_6/mem_reg[2][7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[2][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[3][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[3][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[3][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[3][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[3][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[3][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[4][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[4][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[4][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[4][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[4][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[4][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[4][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1019][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[7][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[7][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[7][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[7][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[7][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[8][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[8][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[8][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[8][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[8][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[8][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[8][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[9][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[9][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[9][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[9][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[9][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[9][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1015][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[11][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[11][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[11][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[11][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[11][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1014][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1014][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[13][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[13][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[13][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[13][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[13][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1010][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1010][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1010][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1006][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1006][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[16][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[16][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[16][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[16][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[16][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[16][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[16][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[17][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[17][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[17][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[17][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[17][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[17][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[18][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[18][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[18][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[18][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[18][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[18][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[19][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[19][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[19][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[19][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[19][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[20][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[20][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[20][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[20][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[20][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[20][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[21][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[21][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[21][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[21][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[21][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[22][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[22][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[22][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[22][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[22][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[23][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[23][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[23][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[23][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[24][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[24][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[24][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[24][5] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[513][0]' (FDE) to 'Instr_memi_5/mem_reg[514][1]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[513][1]' (FDE) to 'Instr_memi_5/mem_reg[513][2]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[513][2]' (FDE) to 'Instr_memi_5/mem_reg[513][3]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[513][3]' (FDE) to 'Instr_memi_5/mem_reg[513][4]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[513][4]' (FDE) to 'Instr_memi_5/mem_reg[513][5]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[513][5]' (FDE) to 'Instr_memi_5/mem_reg[513][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[513][6]' (FDE) to 'Instr_memi_5/mem_reg[513][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[513][7]' (FDE) to 'Instr_memi_5/mem_reg[514][0]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[514][0]' (FDE) to 'Instr_memi_5/mem_reg[514][2]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[514][2]' (FDE) to 'Instr_memi_5/mem_reg[514][3]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[514][3]' (FDE) to 'Instr_memi_5/mem_reg[514][4]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[514][4]' (FDE) to 'Instr_memi_5/mem_reg[514][5]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[514][5]' (FDE) to 'Instr_memi_5/mem_reg[514][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[514][6]' (FDE) to 'Instr_memi_5/mem_reg[514][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[292][0]' (FDE) to 'Instr_memi_4/mem_reg[292][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[292][1]' (FDE) to 'Instr_memi_4/mem_reg[292][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[292][2]' (FDE) to 'Instr_memi_4/mem_reg[292][5]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[292][3]' (FDE) to 'Instr_memi_4/mem_reg[292][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[292][4]' (FDE) to 'Instr_memi_4/mem_reg[292][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[292][6]' (FDE) to 'Instr_memi_4/mem_reg[292][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[532][0]' (FDE) to 'Instr_memi_4/mem_reg[532][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[532][1]' (FDE) to 'Instr_memi_4/mem_reg[532][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[532][2]' (FDE) to 'Instr_memi_4/mem_reg[532][4]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[532][3]' (FDE) to 'Instr_memi_4/mem_reg[532][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[532][5]' (FDE) to 'Instr_memi_4/mem_reg[532][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[532][6]' (FDE) to 'Instr_memi_4/mem_reg[532][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[527][0]' (FDE) to 'Instr_memi_4/mem_reg[527][3]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[527][1]' (FDE) to 'Instr_memi_4/mem_reg[527][3]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[527][2]' (FDE) to 'Instr_memi_4/mem_reg[527][3]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[527][4]' (FDE) to 'Instr_memi_4/mem_reg[527][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[527][5]' (FDE) to 'Instr_memi_4/mem_reg[527][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[527][6]' (FDE) to 'Instr_memi_4/mem_reg[527][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[591][0]' (FDE) to 'Instr_memi_4/mem_reg[591][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[591][1]' (FDE) to 'Instr_memi_4/mem_reg[591][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[591][2]' (FDE) to 'Instr_memi_4/mem_reg[591][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[591][3]' (FDE) to 'Instr_memi_4/mem_reg[591][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[591][4]' (FDE) to 'Instr_memi_4/mem_reg[591][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[591][5]' (FDE) to 'Instr_memi_4/mem_reg[591][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[181][0]' (FDE) to 'Instr_memi_4/mem_reg[181][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[181][1]' (FDE) to 'Instr_memi_4/mem_reg[181][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[181][2]' (FDE) to 'Instr_memi_4/mem_reg[181][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[181][3]' (FDE) to 'Instr_memi_4/mem_reg[181][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[181][4]' (FDE) to 'Instr_memi_4/mem_reg[181][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[181][5]' (FDE) to 'Instr_memi_4/mem_reg[181][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[179][0]' (FDE) to 'Instr_memi_4/mem_reg[179][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[179][1]' (FDE) to 'Instr_memi_4/mem_reg[179][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[179][2]' (FDE) to 'Instr_memi_4/mem_reg[179][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[179][3]' (FDE) to 'Instr_memi_4/mem_reg[179][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[179][4]' (FDE) to 'Instr_memi_4/mem_reg[179][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[179][5]' (FDE) to 'Instr_memi_4/mem_reg[179][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[622][0]' (FDE) to 'Instr_memi_4/mem_reg[622][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[622][1]' (FDE) to 'Instr_memi_4/mem_reg[622][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[622][2]' (FDE) to 'Instr_memi_4/mem_reg[622][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[622][3]' (FDE) to 'Instr_memi_4/mem_reg[622][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[622][4]' (FDE) to 'Instr_memi_4/mem_reg[622][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[622][5]' (FDE) to 'Instr_memi_4/mem_reg[622][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[623][0]' (FDE) to 'Instr_memi_4/mem_reg[623][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[623][1]' (FDE) to 'Instr_memi_4/mem_reg[623][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[623][2]' (FDE) to 'Instr_memi_4/mem_reg[623][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[623][3]' (FDE) to 'Instr_memi_4/mem_reg[623][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[623][4]' (FDE) to 'Instr_memi_4/mem_reg[623][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[623][5]' (FDE) to 'Instr_memi_4/mem_reg[623][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[218][0]' (FDE) to 'Instr_memi_4/mem_reg[218][5]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[218][1]' (FDE) to 'Instr_memi_4/mem_reg[218][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[218][2]' (FDE) to 'Instr_memi_4/mem_reg[218][5]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[218][3]' (FDE) to 'Instr_memi_4/mem_reg[218][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[218][4]' (FDE) to 'Instr_memi_4/mem_reg[218][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[218][6]' (FDE) to 'Instr_memi_4/mem_reg[218][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[424][0]' (FDE) to 'Instr_memi_4/mem_reg[424][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[424][1]' (FDE) to 'Instr_memi_4/mem_reg[424][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[424][2]' (FDE) to 'Instr_memi_4/mem_reg[424][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[424][3]' (FDE) to 'Instr_memi_4/mem_reg[424][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[424][4]' (FDE) to 'Instr_memi_4/mem_reg[424][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[424][5]' (FDE) to 'Instr_memi_4/mem_reg[424][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[473][0]' (FDE) to 'Instr_memi_4/mem_reg[473][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[473][1]' (FDE) to 'Instr_memi_4/mem_reg[473][5]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[473][2]' (FDE) to 'Instr_memi_4/mem_reg[473][5]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[473][3]' (FDE) to 'Instr_memi_4/mem_reg[473][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[473][4]' (FDE) to 'Instr_memi_4/mem_reg[473][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[473][6]' (FDE) to 'Instr_memi_4/mem_reg[473][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[230][0]' (FDE) to 'Instr_memi_4/mem_reg[230][4]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[230][1]' (FDE) to 'Instr_memi_4/mem_reg[230][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[230][2]' (FDE) to 'Instr_memi_4/mem_reg[230][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[230][3]' (FDE) to 'Instr_memi_4/mem_reg[230][4]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[230][5]' (FDE) to 'Instr_memi_4/mem_reg[230][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[230][6]' (FDE) to 'Instr_memi_4/mem_reg[230][7]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:04:17 ; elapsed = 00:04:56 . Memory (MB): peak = 1583.008 ; gain = 1264.055
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-------------------------+------------+----------+
+|      |RTL Partition            |Replication |Instances |
++------+-------------------------+------------+----------+
+|1     |ram_memory__GBM2         |           1|         1|
+|2     |ram_memory__GBM5__1      |           1|      6321|
+|3     |ram_memory__GBM4__1      |           1|      5024|
+|4     |ram_memory__GBM3__1      |           1|      4233|
+|5     |ram_memory__GBM2__1      |           1|      3773|
+|6     |ram_memory__GBM1__1      |           1|      3095|
+|7     |MIPS_single_cycle_GT0    |           1|        69|
+|8     |MIPS_single_cycle_GT1    |           1|         8|
+|9     |MIPS_single_cycle_GT2    |           1|         8|
+|10    |MIPS_single_cycle_GT3    |           1|         8|
+|11    |MIPS_single_cycle_GT5    |           1|         8|
+|12    |MIPS_single_cycle_GT6    |           1|         8|
+|13    |MIPS_single_cycle_GT7    |           1|         8|
+|14    |MIPS_single_cycle_GT8    |           1|         8|
+|15    |MIPS_single_cycle_GT9    |           1|         8|
+|16    |MIPS_single_cycle_GT10   |           1|         8|
+|17    |MIPS_single_cycle_GT11   |           1|         8|
+|18    |MIPS_single_cycle_GT12   |           1|         8|
+|19    |MIPS_single_cycle_GT13   |           1|         8|
+|20    |MIPS_single_cycle_GT14   |           1|         8|
+|21    |MIPS_single_cycle_GT15   |           1|         8|
+|22    |MIPS_single_cycle_GT16   |           1|         8|
+|23    |MIPS_single_cycle_GT17   |           1|         8|
+|24    |MIPS_single_cycle_GT18   |           1|         8|
+|25    |MIPS_single_cycle_GT19   |           1|         8|
+|26    |MIPS_single_cycle_GT20   |           1|         8|
+|27    |MIPS_single_cycle_GT21   |           1|         8|
+|28    |MIPS_single_cycle_GT22   |           1|         8|
+|29    |MIPS_single_cycle_GT23   |           1|         8|
+|30    |MIPS_single_cycle_GT24   |           1|         8|
+|31    |MIPS_single_cycle_GT25   |           1|         8|
+|32    |MIPS_single_cycle_GT27   |           1|         8|
+|33    |MIPS_single_cycle_GT28   |           1|         8|
+|34    |MIPS_single_cycle_GT29   |           1|         8|
+|35    |MIPS_single_cycle_GT30   |           1|         8|
+|36    |MIPS_single_cycle_GT31   |           1|         8|
+|37    |MIPS_single_cycle_GT32   |           1|         8|
+|38    |MIPS_single_cycle_GT33   |           1|         8|
+|39    |MIPS_single_cycle_GT34   |           1|         8|
+|40    |MIPS_single_cycle_GT35   |           1|         8|
+|41    |MIPS_single_cycle_GT36   |           1|         8|
+|42    |MIPS_single_cycle_GT37   |           1|         8|
+|43    |MIPS_single_cycle_GT1__3 |           1|        23|
+|44    |MIPS_single_cycle_GT3__1 |           1|         8|
+|45    |MIPS_single_cycle_GT48   |           1|         3|
+|46    |MIPS_single_cycle_GT49   |           1|         4|
+|47    |MIPS_single_cycle_GT50   |           1|         3|
+|48    |MIPS_single_cycle_GT51   |           1|         5|
+|49    |MIPS_single_cycle_GT52   |           1|         6|
+|50    |MIPS_single_cycle_GT53   |           1|         2|
+|51    |MIPS_single_cycle_GT54   |           1|         3|
+|52    |MIPS_single_cycle_GT55   |           1|         4|
+|53    |MIPS_single_cycle_GT56   |           1|         4|
+|54    |MIPS_single_cycle_GT57   |           1|         2|
+|55    |MIPS_single_cycle_GT58   |           1|         4|
+|56    |MIPS_single_cycle_GT59   |           1|         4|
+|57    |MIPS_single_cycle_GT60   |           1|         5|
+|58    |MIPS_single_cycle_GT61   |           1|         5|
+|59    |MIPS_single_cycle_GT62   |           1|         4|
+|60    |MIPS_single_cycle_GT63   |           1|         3|
+|61    |MIPS_single_cycle_GT64   |           1|         2|
+|62    |MIPS_single_cycle_GT65   |           1|         4|
+|63    |MIPS_single_cycle_GT66   |           1|         4|
+|64    |MIPS_single_cycle_GT67   |           1|         3|
+|65    |MIPS_single_cycle_GT68   |           1|         2|
+|66    |MIPS_single_cycle_GT69   |           1|         5|
+|67    |MIPS_single_cycle_GT70   |           1|         5|
+|68    |MIPS_single_cycle_GT71   |           1|         6|
+|69    |MIPS_single_cycle_GT72   |           1|         3|
+|70    |MIPS_single_cycle_GT73   |           1|         2|
+|71    |MIPS_single_cycle_GT74   |           1|         2|
+|72    |MIPS_single_cycle_GT75   |           1|         3|
+|73    |MIPS_single_cycle_GT76   |           1|         2|
+|74    |MIPS_single_cycle_GT77   |           1|         2|
+|75    |MIPS_single_cycle_GT78   |           1|         2|
+|76    |MIPS_single_cycle_GT79   |           1|         3|
+|77    |MIPS_single_cycle_GT80   |           1|         2|
+|78    |MIPS_single_cycle_GT81   |           1|         3|
+|79    |MIPS_single_cycle_GT82   |           1|         3|
+|80    |MIPS_single_cycle_GT83   |           1|         4|
+|81    |MIPS_single_cycle_GT84   |           1|         4|
+|82    |MIPS_single_cycle_GT85   |           1|         5|
+|83    |MIPS_single_cycle_GT86   |           1|         8|
+|84    |MIPS_single_cycle_GT87   |           1|         2|
+|85    |MIPS_single_cycle_GT88   |           1|         4|
+|86    |MIPS_single_cycle_GT89   |           1|         5|
+|87    |MIPS_single_cycle_GT90   |           1|         4|
+|88    |MIPS_single_cycle_GT91   |           1|         4|
+|89    |MIPS_single_cycle_GT92   |           1|         6|
+|90    |MIPS_single_cycle_GT93   |           1|         5|
+|91    |MIPS_single_cycle_GT94   |           1|         5|
+|92    |MIPS_single_cycle_GT95   |           1|         5|
+|93    |MIPS_single_cycle_GT96   |           1|         5|
+|94    |MIPS_single_cycle_GT97   |           1|         4|
+|95    |MIPS_single_cycle_GT98   |           1|         5|
+|96    |MIPS_single_cycle_GT99   |           1|         6|
+|97    |MIPS_single_cycle_GT100  |           1|         5|
+|98    |MIPS_single_cycle_GT101  |           1|         3|
+|99    |MIPS_single_cycle_GT102  |           1|         7|
+|100   |MIPS_single_cycle_GT103  |           1|         6|
+|101   |MIPS_single_cycle_GT104  |           1|         4|
+|102   |MIPS_single_cycle_GT105  |           1|         5|
+|103   |MIPS_single_cycle_GT106  |           1|         4|
+|104   |MIPS_single_cycle_GT107  |           1|         5|
+|105   |MIPS_single_cycle_GT108  |           1|         4|
+|106   |MIPS_single_cycle_GT109  |           1|         4|
+|107   |MIPS_single_cycle_GT110  |           1|         5|
+|108   |MIPS_single_cycle_GT111  |           1|         5|
+|109   |MIPS_single_cycle_GT112  |           1|         6|
+|110   |MIPS_single_cycle_GT113  |           1|         4|
+|111   |MIPS_single_cycle_GT114  |           1|         5|
+|112   |MIPS_single_cycle_GT115  |           1|         4|
+|113   |MIPS_single_cycle_GT116  |           1|         5|
+|114   |MIPS_single_cycle_GT117  |           1|         5|
+|115   |MIPS_single_cycle_GT118  |           1|         5|
+|116   |MIPS_single_cycle_GT119  |           1|         6|
+|117   |MIPS_single_cycle_GT120  |           1|         5|
+|118   |MIPS_single_cycle_GT121  |           1|         7|
+|119   |MIPS_single_cycle_GT122  |           1|         6|
+|120   |MIPS_single_cycle_GT123  |           1|         7|
+|121   |MIPS_single_cycle_GT124  |           1|         5|
+|122   |MIPS_single_cycle_GT125  |           1|         6|
+|123   |MIPS_single_cycle_GT126  |           1|         5|
+|124   |MIPS_single_cycle_GT127  |           1|         4|
+|125   |MIPS_single_cycle_GT128  |           1|         3|
+|126   |MIPS_single_cycle_GT129  |           1|         4|
+|127   |MIPS_single_cycle_GT130  |           1|         4|
+|128   |MIPS_single_cycle_GT131  |           1|         4|
+|129   |MIPS_single_cycle_GT132  |           1|         6|
+|130   |MIPS_single_cycle_GT133  |           1|         4|
+|131   |MIPS_single_cycle_GT134  |           1|         5|
+|132   |MIPS_single_cycle_GT135  |           1|         4|
+|133   |MIPS_single_cycle_GT136  |           1|         5|
+|134   |MIPS_single_cycle_GT137  |           1|         3|
+|135   |MIPS_single_cycle_GT138  |           1|         4|
+|136   |MIPS_single_cycle_GT139  |           1|         3|
+|137   |MIPS_single_cycle_GT140  |           1|         5|
+|138   |MIPS_single_cycle_GT141  |           1|         5|
+|139   |MIPS_single_cycle_GT142  |           1|         2|
+|140   |MIPS_single_cycle_GT143  |           1|         3|
+|141   |MIPS_single_cycle_GT144  |           1|         4|
+|142   |MIPS_single_cycle_GT145  |           1|         4|
+|143   |MIPS_single_cycle_GT146  |           1|         5|
+|144   |MIPS_single_cycle_GT147  |           1|         2|
+|145   |MIPS_single_cycle_GT148  |           1|         3|
+|146   |MIPS_single_cycle_GT149  |           1|         4|
+|147   |MIPS_single_cycle_GT150  |           1|         2|
+|148   |MIPS_single_cycle_GT151  |           1|         6|
+|149   |MIPS_single_cycle_GT152  |           1|         4|
+|150   |MIPS_single_cycle_GT153  |           1|         3|
+|151   |MIPS_single_cycle_GT154  |           1|         5|
+|152   |MIPS_single_cycle_GT155  |           1|         5|
+|153   |MIPS_single_cycle_GT156  |           1|         4|
+|154   |MIPS_single_cycle_GT157  |           1|         5|
+|155   |MIPS_single_cycle_GT158  |           1|         5|
+|156   |MIPS_single_cycle_GT159  |           1|         4|
+|157   |MIPS_single_cycle_GT160  |           1|         4|
+|158   |MIPS_single_cycle_GT161  |           1|         5|
+|159   |MIPS_single_cycle_GT162  |           1|         4|
+|160   |MIPS_single_cycle_GT163  |           1|         3|
+|161   |MIPS_single_cycle_GT164  |           1|         3|
+|162   |MIPS_single_cycle_GT165  |           1|         4|
+|163   |MIPS_single_cycle_GT166  |           1|         5|
+|164   |MIPS_single_cycle_GT167  |           1|         5|
+|165   |MIPS_single_cycle_GT168  |           1|         4|
+|166   |MIPS_single_cycle_GT169  |           1|         5|
+|167   |MIPS_single_cycle_GT170  |           1|         5|
+|168   |MIPS_single_cycle_GT171  |           1|         4|
+|169   |MIPS_single_cycle_GT172  |           1|         5|
+|170   |MIPS_single_cycle_GT173  |           1|         6|
+|171   |MIPS_single_cycle_GT174  |           1|         6|
+|172   |MIPS_single_cycle_GT175  |           1|         7|
+|173   |MIPS_single_cycle_GT176  |           1|         3|
+|174   |MIPS_single_cycle_GT177  |           1|         2|
+|175   |MIPS_single_cycle_GT178  |           1|         2|
+|176   |MIPS_single_cycle_GT179  |           1|         6|
+|177   |MIPS_single_cycle_GT180  |           1|         3|
+|178   |MIPS_single_cycle_GT181  |           1|         3|
+|179   |MIPS_single_cycle_GT182  |           1|         5|
+|180   |MIPS_single_cycle_GT183  |           1|         4|
+|181   |MIPS_single_cycle_GT184  |           1|         4|
+|182   |MIPS_single_cycle_GT185  |           1|         4|
+|183   |MIPS_single_cycle_GT186  |           1|         3|
+|184   |MIPS_single_cycle_GT187  |           1|         6|
+|185   |MIPS_single_cycle_GT188  |           1|         4|
+|186   |MIPS_single_cycle_GT189  |           1|         4|
+|187   |MIPS_single_cycle_GT190  |           1|         3|
+|188   |MIPS_single_cycle_GT191  |           1|         5|
+|189   |MIPS_single_cycle_GT192  |           1|         3|
+|190   |MIPS_single_cycle_GT193  |           1|         4|
+|191   |MIPS_single_cycle_GT194  |           1|         2|
+|192   |MIPS_single_cycle_GT195  |           1|         5|
+|193   |MIPS_single_cycle_GT196  |           1|         7|
+|194   |MIPS_single_cycle_GT197  |           1|         2|
+|195   |MIPS_single_cycle_GT198  |           1|         3|
+|196   |MIPS_single_cycle_GT199  |           1|         4|
+|197   |MIPS_single_cycle_GT200  |           1|         5|
+|198   |MIPS_single_cycle_GT201  |           1|         4|
+|199   |MIPS_single_cycle_GT202  |           1|         2|
+|200   |MIPS_single_cycle_GT203  |           1|         5|
+|201   |MIPS_single_cycle_GT204  |           1|         4|
+|202   |MIPS_single_cycle_GT205  |           1|         3|
+|203   |MIPS_single_cycle_GT206  |           1|         5|
+|204   |MIPS_single_cycle_GT207  |           1|         4|
+|205   |MIPS_single_cycle_GT208  |           1|         7|
+|206   |MIPS_single_cycle_GT209  |           1|         2|
+|207   |MIPS_single_cycle_GT210  |           1|         6|
+|208   |MIPS_single_cycle_GT211  |           1|         7|
+|209   |MIPS_single_cycle_GT212  |           1|         5|
+|210   |MIPS_single_cycle_GT213  |           1|         5|
+|211   |MIPS_single_cycle_GT214  |           1|         5|
+|212   |MIPS_single_cycle_GT215  |           1|         7|
+|213   |MIPS_single_cycle_GT216  |           1|         5|
+|214   |MIPS_single_cycle_GT217  |           1|         5|
+|215   |MIPS_single_cycle_GT218  |           1|         6|
+|216   |MIPS_single_cycle_GT219  |           1|         6|
+|217   |MIPS_single_cycle_GT220  |           1|         7|
+|218   |MIPS_single_cycle_GT221  |           1|         5|
+|219   |MIPS_single_cycle_GT222  |           1|         4|
+|220   |MIPS_single_cycle_GT223  |           1|         6|
+|221   |MIPS_single_cycle_GT224  |           1|         6|
+|222   |MIPS_single_cycle_GT225  |           1|         4|
+|223   |MIPS_single_cycle_GT226  |           1|         6|
+|224   |MIPS_single_cycle_GT227  |           1|         7|
+|225   |MIPS_single_cycle_GT228  |           1|         4|
+|226   |MIPS_single_cycle_GT229  |           1|         4|
+|227   |MIPS_single_cycle_GT230  |           1|         4|
+|228   |MIPS_single_cycle_GT231  |           1|         3|
+|229   |MIPS_single_cycle_GT232  |           1|         5|
+|230   |MIPS_single_cycle_GT233  |           1|         4|
+|231   |MIPS_single_cycle_GT234  |           1|         4|
+|232   |MIPS_single_cycle_GT235  |           1|         2|
+|233   |MIPS_single_cycle_GT236  |           1|         2|
+|234   |MIPS_single_cycle_GT237  |           1|         3|
+|235   |MIPS_single_cycle_GT238  |           1|         3|
+|236   |MIPS_single_cycle_GT239  |           1|         3|
+|237   |MIPS_single_cycle_GT240  |           1|         3|
+|238   |MIPS_single_cycle_GT241  |           1|         2|
+|239   |MIPS_single_cycle_GT242  |           1|         3|
+|240   |MIPS_single_cycle_GT243  |           1|         3|
+|241   |MIPS_single_cycle_GT244  |           1|         4|
+|242   |MIPS_single_cycle_GT245  |           1|         4|
+|243   |MIPS_single_cycle_GT246  |           1|         2|
+|244   |MIPS_single_cycle_GT247  |           1|         3|
+|245   |MIPS_single_cycle_GT248  |           1|         2|
+|246   |MIPS_single_cycle_GT249  |           1|         4|
+|247   |MIPS_single_cycle_GT250  |           1|         4|
+|248   |MIPS_single_cycle_GT251  |           1|         3|
+|249   |MIPS_single_cycle_GT252  |           1|         3|
+|250   |MIPS_single_cycle_GT253  |           1|         4|
+|251   |MIPS_single_cycle_GT254  |           1|         3|
+|252   |MIPS_single_cycle_GT255  |           1|         4|
+|253   |MIPS_single_cycle_GT256  |           1|         5|
+|254   |MIPS_single_cycle_GT257  |           1|         5|
+|255   |MIPS_single_cycle_GT258  |           1|         4|
+|256   |MIPS_single_cycle_GT259  |           1|         3|
+|257   |MIPS_single_cycle_GT260  |           1|         2|
+|258   |MIPS_single_cycle_GT261  |           1|         4|
+|259   |MIPS_single_cycle_GT262  |           1|         3|
+|260   |MIPS_single_cycle_GT263  |           1|         3|
+|261   |MIPS_single_cycle_GT264  |           1|         6|
+|262   |MIPS_single_cycle_GT265  |           1|         4|
+|263   |MIPS_single_cycle_GT266  |           1|         5|
+|264   |MIPS_single_cycle_GT267  |           1|         5|
+|265   |MIPS_single_cycle_GT268  |           1|         4|
+|266   |MIPS_single_cycle_GT269  |           1|         5|
+|267   |MIPS_single_cycle_GT270  |           1|         4|
+|268   |MIPS_single_cycle_GT271  |           1|         5|
+|269   |MIPS_single_cycle_GT272  |           1|         3|
+|270   |MIPS_single_cycle_GT273  |           1|         2|
+|271   |MIPS_single_cycle_GT274  |           1|         4|
+|272   |MIPS_single_cycle_GT275  |           1|         3|
+|273   |MIPS_single_cycle_GT276  |           1|         4|
+|274   |MIPS_single_cycle_GT277  |           1|         5|
+|275   |MIPS_single_cycle_GT278  |           1|         2|
+|276   |MIPS_single_cycle_GT279  |           1|         4|
+|277   |MIPS_single_cycle_GT280  |           1|         5|
+|278   |MIPS_single_cycle_GT281  |           1|         4|
+|279   |MIPS_single_cycle_GT282  |           1|         4|
+|280   |MIPS_single_cycle_GT283  |           1|         5|
+|281   |MIPS_single_cycle_GT284  |           1|         3|
+|282   |MIPS_single_cycle_GT285  |           1|         4|
+|283   |MIPS_single_cycle_GT286  |           1|         5|
+|284   |MIPS_single_cycle_GT287  |           1|         6|
+|285   |MIPS_single_cycle_GT288  |           1|         4|
+|286   |MIPS_single_cycle_GT289  |           1|         5|
+|287   |MIPS_single_cycle_GT290  |           1|         4|
+|288   |MIPS_single_cycle_GT291  |           1|         5|
+|289   |MIPS_single_cycle_GT292  |           1|         5|
+|290   |MIPS_single_cycle_GT293  |           1|         5|
+|291   |MIPS_single_cycle_GT294  |           1|         6|
+|292   |MIPS_single_cycle_GT295  |           1|         3|
+|293   |MIPS_single_cycle_GT296  |           1|         4|
+|294   |MIPS_single_cycle_GT297  |           1|         4|
+|295   |MIPS_single_cycle_GT298  |           1|         4|
+|296   |MIPS_single_cycle_GT299  |           1|         5|
+|297   |MIPS_single_cycle_GT300  |           1|         6|
+|298   |MIPS_single_cycle_GT301  |           1|         5|
+|299   |MIPS_single_cycle_GT302  |           1|         5|
+|300   |MIPS_single_cycle_GT303  |           1|         6|
+|301   |MIPS_single_cycle_GT304  |           1|         5|
+|302   |MIPS_single_cycle_GT305  |           1|         6|
+|303   |MIPS_single_cycle_GT306  |           1|         5|
+|304   |MIPS_single_cycle_GT307  |           1|         3|
+|305   |MIPS_single_cycle_GT308  |           1|         3|
+|306   |MIPS_single_cycle_GT309  |           1|         2|
+|307   |MIPS_single_cycle_GT310  |           1|         4|
+|308   |MIPS_single_cycle_GT311  |           1|         3|
+|309   |MIPS_single_cycle_GT312  |           1|         3|
+|310   |MIPS_single_cycle_GT313  |           1|         2|
+|311   |MIPS_single_cycle_GT314  |           1|         3|
+|312   |MIPS_single_cycle_GT315  |           1|         2|
+|313   |MIPS_single_cycle_GT316  |           1|         2|
+|314   |MIPS_single_cycle_GT317  |           1|         6|
+|315   |MIPS_single_cycle_GT319  |           1|         3|
+|316   |MIPS_single_cycle_GT320  |           1|         6|
+|317   |MIPS_single_cycle_GT321  |           1|         3|
+|318   |MIPS_single_cycle_GT322  |           1|         7|
+|319   |MIPS_single_cycle_GT323  |           1|         2|
+|320   |MIPS_single_cycle_GT324  |           1|         3|
+|321   |MIPS_single_cycle_GT325  |           1|         7|
+|322   |MIPS_single_cycle_GT326  |           1|         2|
+|323   |MIPS_single_cycle_GT327  |           1|         7|
+|324   |MIPS_single_cycle_GT0__4 |           1|     37317|
++------+-------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:04:31 ; elapsed = 00:05:27 . Memory (MB): peak = 1583.008 ; gain = 1264.055
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-------------------------+------------+----------+
+|      |RTL Partition            |Replication |Instances |
++------+-------------------------+------------+----------+
+|1     |ram_memory__GBM2         |           1|         1|
+|2     |ram_memory__GBM5__1      |           1|      4796|
+|3     |ram_memory__GBM4__1      |           1|      3625|
+|4     |ram_memory__GBM3__1      |           1|      3083|
+|5     |ram_memory__GBM2__1      |           1|      2514|
+|6     |ram_memory__GBM1__1      |           1|      2031|
+|7     |MIPS_single_cycle_GT0    |           1|        32|
+|8     |MIPS_single_cycle_GT1    |           1|         8|
+|9     |MIPS_single_cycle_GT2    |           1|         8|
+|10    |MIPS_single_cycle_GT3    |           1|         8|
+|11    |MIPS_single_cycle_GT5    |           1|         8|
+|12    |MIPS_single_cycle_GT6    |           1|         8|
+|13    |MIPS_single_cycle_GT7    |           1|         8|
+|14    |MIPS_single_cycle_GT8    |           1|         8|
+|15    |MIPS_single_cycle_GT9    |           1|         8|
+|16    |MIPS_single_cycle_GT10   |           1|         8|
+|17    |MIPS_single_cycle_GT11   |           1|         8|
+|18    |MIPS_single_cycle_GT12   |           1|         8|
+|19    |MIPS_single_cycle_GT13   |           1|         8|
+|20    |MIPS_single_cycle_GT14   |           1|         8|
+|21    |MIPS_single_cycle_GT15   |           1|         8|
+|22    |MIPS_single_cycle_GT16   |           1|         8|
+|23    |MIPS_single_cycle_GT17   |           1|         8|
+|24    |MIPS_single_cycle_GT18   |           1|         8|
+|25    |MIPS_single_cycle_GT19   |           1|         8|
+|26    |MIPS_single_cycle_GT20   |           1|         8|
+|27    |MIPS_single_cycle_GT21   |           1|         8|
+|28    |MIPS_single_cycle_GT22   |           1|         8|
+|29    |MIPS_single_cycle_GT23   |           1|         8|
+|30    |MIPS_single_cycle_GT24   |           1|         8|
+|31    |MIPS_single_cycle_GT25   |           1|         8|
+|32    |MIPS_single_cycle_GT27   |           1|         8|
+|33    |MIPS_single_cycle_GT28   |           1|         8|
+|34    |MIPS_single_cycle_GT29   |           1|         8|
+|35    |MIPS_single_cycle_GT30   |           1|         8|
+|36    |MIPS_single_cycle_GT31   |           1|         8|
+|37    |MIPS_single_cycle_GT32   |           1|         8|
+|38    |MIPS_single_cycle_GT33   |           1|         8|
+|39    |MIPS_single_cycle_GT34   |           1|         8|
+|40    |MIPS_single_cycle_GT35   |           1|         8|
+|41    |MIPS_single_cycle_GT36   |           1|         8|
+|42    |MIPS_single_cycle_GT37   |           1|         8|
+|43    |MIPS_single_cycle_GT3__1 |           1|         8|
+|44    |MIPS_single_cycle_GT48   |           1|         1|
+|45    |MIPS_single_cycle_GT49   |           1|         1|
+|46    |MIPS_single_cycle_GT50   |           1|         1|
+|47    |MIPS_single_cycle_GT51   |           1|         1|
+|48    |MIPS_single_cycle_GT52   |           1|         1|
+|49    |MIPS_single_cycle_GT53   |           1|         1|
+|50    |MIPS_single_cycle_GT54   |           1|         1|
+|51    |MIPS_single_cycle_GT55   |           1|         1|
+|52    |MIPS_single_cycle_GT56   |           1|         1|
+|53    |MIPS_single_cycle_GT57   |           1|         1|
+|54    |MIPS_single_cycle_GT58   |           1|         1|
+|55    |MIPS_single_cycle_GT59   |           1|         1|
+|56    |MIPS_single_cycle_GT60   |           1|         1|
+|57    |MIPS_single_cycle_GT61   |           1|         1|
+|58    |MIPS_single_cycle_GT62   |           1|         1|
+|59    |MIPS_single_cycle_GT63   |           1|         1|
+|60    |MIPS_single_cycle_GT64   |           1|         1|
+|61    |MIPS_single_cycle_GT65   |           1|         1|
+|62    |MIPS_single_cycle_GT66   |           1|         1|
+|63    |MIPS_single_cycle_GT67   |           1|         1|
+|64    |MIPS_single_cycle_GT68   |           1|         1|
+|65    |MIPS_single_cycle_GT69   |           1|         1|
+|66    |MIPS_single_cycle_GT70   |           1|         1|
+|67    |MIPS_single_cycle_GT71   |           1|         1|
+|68    |MIPS_single_cycle_GT72   |           1|         1|
+|69    |MIPS_single_cycle_GT73   |           1|         1|
+|70    |MIPS_single_cycle_GT74   |           1|         1|
+|71    |MIPS_single_cycle_GT75   |           1|         1|
+|72    |MIPS_single_cycle_GT76   |           1|         1|
+|73    |MIPS_single_cycle_GT77   |           1|         1|
+|74    |MIPS_single_cycle_GT78   |           1|         1|
+|75    |MIPS_single_cycle_GT79   |           1|         1|
+|76    |MIPS_single_cycle_GT80   |           1|         1|
+|77    |MIPS_single_cycle_GT81   |           1|         1|
+|78    |MIPS_single_cycle_GT82   |           1|         1|
+|79    |MIPS_single_cycle_GT83   |           1|         1|
+|80    |MIPS_single_cycle_GT84   |           1|         1|
+|81    |MIPS_single_cycle_GT85   |           1|         1|
+|82    |MIPS_single_cycle_GT86   |           1|         1|
+|83    |MIPS_single_cycle_GT87   |           1|         1|
+|84    |MIPS_single_cycle_GT88   |           1|         1|
+|85    |MIPS_single_cycle_GT89   |           1|         1|
+|86    |MIPS_single_cycle_GT90   |           1|         1|
+|87    |MIPS_single_cycle_GT91   |           1|         1|
+|88    |MIPS_single_cycle_GT92   |           1|         1|
+|89    |MIPS_single_cycle_GT93   |           1|         1|
+|90    |MIPS_single_cycle_GT94   |           1|         1|
+|91    |MIPS_single_cycle_GT95   |           1|         1|
+|92    |MIPS_single_cycle_GT96   |           1|         1|
+|93    |MIPS_single_cycle_GT97   |           1|         1|
+|94    |MIPS_single_cycle_GT98   |           1|         1|
+|95    |MIPS_single_cycle_GT99   |           1|         1|
+|96    |MIPS_single_cycle_GT100  |           1|         1|
+|97    |MIPS_single_cycle_GT101  |           1|         1|
+|98    |MIPS_single_cycle_GT102  |           1|         1|
+|99    |MIPS_single_cycle_GT103  |           1|         1|
+|100   |MIPS_single_cycle_GT104  |           1|         1|
+|101   |MIPS_single_cycle_GT105  |           1|         1|
+|102   |MIPS_single_cycle_GT106  |           1|         1|
+|103   |MIPS_single_cycle_GT107  |           1|         1|
+|104   |MIPS_single_cycle_GT108  |           1|         1|
+|105   |MIPS_single_cycle_GT109  |           1|         1|
+|106   |MIPS_single_cycle_GT110  |           1|         1|
+|107   |MIPS_single_cycle_GT111  |           1|         1|
+|108   |MIPS_single_cycle_GT112  |           1|         1|
+|109   |MIPS_single_cycle_GT113  |           1|         1|
+|110   |MIPS_single_cycle_GT114  |           1|         1|
+|111   |MIPS_single_cycle_GT115  |           1|         1|
+|112   |MIPS_single_cycle_GT116  |           1|         1|
+|113   |MIPS_single_cycle_GT117  |           1|         1|
+|114   |MIPS_single_cycle_GT118  |           1|         1|
+|115   |MIPS_single_cycle_GT119  |           1|         1|
+|116   |MIPS_single_cycle_GT120  |           1|         1|
+|117   |MIPS_single_cycle_GT121  |           1|         1|
+|118   |MIPS_single_cycle_GT122  |           1|         1|
+|119   |MIPS_single_cycle_GT123  |           1|         1|
+|120   |MIPS_single_cycle_GT124  |           1|         1|
+|121   |MIPS_single_cycle_GT125  |           1|         1|
+|122   |MIPS_single_cycle_GT126  |           1|         1|
+|123   |MIPS_single_cycle_GT127  |           1|         1|
+|124   |MIPS_single_cycle_GT128  |           1|         1|
+|125   |MIPS_single_cycle_GT129  |           1|         1|
+|126   |MIPS_single_cycle_GT130  |           1|         1|
+|127   |MIPS_single_cycle_GT131  |           1|         1|
+|128   |MIPS_single_cycle_GT132  |           1|         1|
+|129   |MIPS_single_cycle_GT133  |           1|         1|
+|130   |MIPS_single_cycle_GT134  |           1|         1|
+|131   |MIPS_single_cycle_GT135  |           1|         1|
+|132   |MIPS_single_cycle_GT136  |           1|         1|
+|133   |MIPS_single_cycle_GT137  |           1|         1|
+|134   |MIPS_single_cycle_GT138  |           1|         1|
+|135   |MIPS_single_cycle_GT139  |           1|         1|
+|136   |MIPS_single_cycle_GT140  |           1|         1|
+|137   |MIPS_single_cycle_GT141  |           1|         1|
+|138   |MIPS_single_cycle_GT142  |           1|         1|
+|139   |MIPS_single_cycle_GT143  |           1|         1|
+|140   |MIPS_single_cycle_GT144  |           1|         1|
+|141   |MIPS_single_cycle_GT145  |           1|         1|
+|142   |MIPS_single_cycle_GT146  |           1|         1|
+|143   |MIPS_single_cycle_GT147  |           1|         1|
+|144   |MIPS_single_cycle_GT148  |           1|         1|
+|145   |MIPS_single_cycle_GT149  |           1|         1|
+|146   |MIPS_single_cycle_GT150  |           1|         1|
+|147   |MIPS_single_cycle_GT151  |           1|         1|
+|148   |MIPS_single_cycle_GT152  |           1|         1|
+|149   |MIPS_single_cycle_GT153  |           1|         1|
+|150   |MIPS_single_cycle_GT154  |           1|         1|
+|151   |MIPS_single_cycle_GT155  |           1|         1|
+|152   |MIPS_single_cycle_GT156  |           1|         1|
+|153   |MIPS_single_cycle_GT157  |           1|         1|
+|154   |MIPS_single_cycle_GT158  |           1|         1|
+|155   |MIPS_single_cycle_GT159  |           1|         1|
+|156   |MIPS_single_cycle_GT160  |           1|         1|
+|157   |MIPS_single_cycle_GT161  |           1|         1|
+|158   |MIPS_single_cycle_GT162  |           1|         1|
+|159   |MIPS_single_cycle_GT163  |           1|         1|
+|160   |MIPS_single_cycle_GT164  |           1|         1|
+|161   |MIPS_single_cycle_GT165  |           1|         1|
+|162   |MIPS_single_cycle_GT166  |           1|         1|
+|163   |MIPS_single_cycle_GT167  |           1|         1|
+|164   |MIPS_single_cycle_GT168  |           1|         1|
+|165   |MIPS_single_cycle_GT169  |           1|         1|
+|166   |MIPS_single_cycle_GT170  |           1|         1|
+|167   |MIPS_single_cycle_GT171  |           1|         1|
+|168   |MIPS_single_cycle_GT172  |           1|         1|
+|169   |MIPS_single_cycle_GT173  |           1|         1|
+|170   |MIPS_single_cycle_GT174  |           1|         1|
+|171   |MIPS_single_cycle_GT175  |           1|         1|
+|172   |MIPS_single_cycle_GT176  |           1|         1|
+|173   |MIPS_single_cycle_GT177  |           1|         1|
+|174   |MIPS_single_cycle_GT178  |           1|         1|
+|175   |MIPS_single_cycle_GT179  |           1|         1|
+|176   |MIPS_single_cycle_GT180  |           1|         1|
+|177   |MIPS_single_cycle_GT181  |           1|         1|
+|178   |MIPS_single_cycle_GT182  |           1|         1|
+|179   |MIPS_single_cycle_GT183  |           1|         1|
+|180   |MIPS_single_cycle_GT184  |           1|         1|
+|181   |MIPS_single_cycle_GT185  |           1|         1|
+|182   |MIPS_single_cycle_GT186  |           1|         1|
+|183   |MIPS_single_cycle_GT187  |           1|         1|
+|184   |MIPS_single_cycle_GT188  |           1|         1|
+|185   |MIPS_single_cycle_GT189  |           1|         1|
+|186   |MIPS_single_cycle_GT190  |           1|         1|
+|187   |MIPS_single_cycle_GT191  |           1|         1|
+|188   |MIPS_single_cycle_GT192  |           1|         1|
+|189   |MIPS_single_cycle_GT193  |           1|         1|
+|190   |MIPS_single_cycle_GT194  |           1|         1|
+|191   |MIPS_single_cycle_GT195  |           1|         1|
+|192   |MIPS_single_cycle_GT196  |           1|         1|
+|193   |MIPS_single_cycle_GT197  |           1|         1|
+|194   |MIPS_single_cycle_GT198  |           1|         1|
+|195   |MIPS_single_cycle_GT199  |           1|         1|
+|196   |MIPS_single_cycle_GT200  |           1|         1|
+|197   |MIPS_single_cycle_GT201  |           1|         1|
+|198   |MIPS_single_cycle_GT202  |           1|         1|
+|199   |MIPS_single_cycle_GT203  |           1|         1|
+|200   |MIPS_single_cycle_GT204  |           1|         1|
+|201   |MIPS_single_cycle_GT205  |           1|         1|
+|202   |MIPS_single_cycle_GT206  |           1|         1|
+|203   |MIPS_single_cycle_GT207  |           1|         1|
+|204   |MIPS_single_cycle_GT208  |           1|         1|
+|205   |MIPS_single_cycle_GT209  |           1|         1|
+|206   |MIPS_single_cycle_GT210  |           1|         1|
+|207   |MIPS_single_cycle_GT211  |           1|         1|
+|208   |MIPS_single_cycle_GT212  |           1|         1|
+|209   |MIPS_single_cycle_GT213  |           1|         1|
+|210   |MIPS_single_cycle_GT214  |           1|         1|
+|211   |MIPS_single_cycle_GT215  |           1|         1|
+|212   |MIPS_single_cycle_GT216  |           1|         1|
+|213   |MIPS_single_cycle_GT217  |           1|         1|
+|214   |MIPS_single_cycle_GT218  |           1|         1|
+|215   |MIPS_single_cycle_GT219  |           1|         1|
+|216   |MIPS_single_cycle_GT220  |           1|         1|
+|217   |MIPS_single_cycle_GT221  |           1|         1|
+|218   |MIPS_single_cycle_GT222  |           1|         1|
+|219   |MIPS_single_cycle_GT223  |           1|         1|
+|220   |MIPS_single_cycle_GT224  |           1|         1|
+|221   |MIPS_single_cycle_GT225  |           1|         1|
+|222   |MIPS_single_cycle_GT226  |           1|         1|
+|223   |MIPS_single_cycle_GT227  |           1|         1|
+|224   |MIPS_single_cycle_GT228  |           1|         1|
+|225   |MIPS_single_cycle_GT229  |           1|         1|
+|226   |MIPS_single_cycle_GT230  |           1|         1|
+|227   |MIPS_single_cycle_GT231  |           1|         1|
+|228   |MIPS_single_cycle_GT232  |           1|         1|
+|229   |MIPS_single_cycle_GT233  |           1|         1|
+|230   |MIPS_single_cycle_GT234  |           1|         1|
+|231   |MIPS_single_cycle_GT235  |           1|         1|
+|232   |MIPS_single_cycle_GT236  |           1|         1|
+|233   |MIPS_single_cycle_GT237  |           1|         1|
+|234   |MIPS_single_cycle_GT238  |           1|         1|
+|235   |MIPS_single_cycle_GT239  |           1|         1|
+|236   |MIPS_single_cycle_GT240  |           1|         1|
+|237   |MIPS_single_cycle_GT241  |           1|         1|
+|238   |MIPS_single_cycle_GT242  |           1|         1|
+|239   |MIPS_single_cycle_GT243  |           1|         1|
+|240   |MIPS_single_cycle_GT244  |           1|         1|
+|241   |MIPS_single_cycle_GT245  |           1|         1|
+|242   |MIPS_single_cycle_GT246  |           1|         1|
+|243   |MIPS_single_cycle_GT247  |           1|         1|
+|244   |MIPS_single_cycle_GT248  |           1|         1|
+|245   |MIPS_single_cycle_GT249  |           1|         1|
+|246   |MIPS_single_cycle_GT250  |           1|         1|
+|247   |MIPS_single_cycle_GT251  |           1|         1|
+|248   |MIPS_single_cycle_GT252  |           1|         1|
+|249   |MIPS_single_cycle_GT253  |           1|         1|
+|250   |MIPS_single_cycle_GT254  |           1|         1|
+|251   |MIPS_single_cycle_GT255  |           1|         1|
+|252   |MIPS_single_cycle_GT256  |           1|         1|
+|253   |MIPS_single_cycle_GT257  |           1|         1|
+|254   |MIPS_single_cycle_GT258  |           1|         1|
+|255   |MIPS_single_cycle_GT259  |           1|         1|
+|256   |MIPS_single_cycle_GT260  |           1|         1|
+|257   |MIPS_single_cycle_GT261  |           1|         1|
+|258   |MIPS_single_cycle_GT262  |           1|         1|
+|259   |MIPS_single_cycle_GT263  |           1|         1|
+|260   |MIPS_single_cycle_GT264  |           1|         1|
+|261   |MIPS_single_cycle_GT265  |           1|         1|
+|262   |MIPS_single_cycle_GT266  |           1|         1|
+|263   |MIPS_single_cycle_GT267  |           1|         1|
+|264   |MIPS_single_cycle_GT268  |           1|         1|
+|265   |MIPS_single_cycle_GT269  |           1|         1|
+|266   |MIPS_single_cycle_GT270  |           1|         1|
+|267   |MIPS_single_cycle_GT271  |           1|         1|
+|268   |MIPS_single_cycle_GT272  |           1|         1|
+|269   |MIPS_single_cycle_GT273  |           1|         1|
+|270   |MIPS_single_cycle_GT274  |           1|         1|
+|271   |MIPS_single_cycle_GT275  |           1|         1|
+|272   |MIPS_single_cycle_GT276  |           1|         1|
+|273   |MIPS_single_cycle_GT277  |           1|         1|
+|274   |MIPS_single_cycle_GT278  |           1|         1|
+|275   |MIPS_single_cycle_GT279  |           1|         1|
+|276   |MIPS_single_cycle_GT280  |           1|         1|
+|277   |MIPS_single_cycle_GT281  |           1|         1|
+|278   |MIPS_single_cycle_GT282  |           1|         1|
+|279   |MIPS_single_cycle_GT283  |           1|         1|
+|280   |MIPS_single_cycle_GT284  |           1|         1|
+|281   |MIPS_single_cycle_GT285  |           1|         1|
+|282   |MIPS_single_cycle_GT286  |           1|         1|
+|283   |MIPS_single_cycle_GT287  |           1|         1|
+|284   |MIPS_single_cycle_GT288  |           1|         1|
+|285   |MIPS_single_cycle_GT289  |           1|         1|
+|286   |MIPS_single_cycle_GT290  |           1|         1|
+|287   |MIPS_single_cycle_GT291  |           1|         1|
+|288   |MIPS_single_cycle_GT292  |           1|         1|
+|289   |MIPS_single_cycle_GT293  |           1|         1|
+|290   |MIPS_single_cycle_GT294  |           1|         1|
+|291   |MIPS_single_cycle_GT295  |           1|         1|
+|292   |MIPS_single_cycle_GT296  |           1|         1|
+|293   |MIPS_single_cycle_GT297  |           1|         1|
+|294   |MIPS_single_cycle_GT298  |           1|         1|
+|295   |MIPS_single_cycle_GT299  |           1|         1|
+|296   |MIPS_single_cycle_GT300  |           1|         1|
+|297   |MIPS_single_cycle_GT301  |           1|         1|
+|298   |MIPS_single_cycle_GT302  |           1|         1|
+|299   |MIPS_single_cycle_GT303  |           1|         1|
+|300   |MIPS_single_cycle_GT304  |           1|         1|
+|301   |MIPS_single_cycle_GT305  |           1|         1|
+|302   |MIPS_single_cycle_GT306  |           1|         1|
+|303   |MIPS_single_cycle_GT307  |           1|         1|
+|304   |MIPS_single_cycle_GT308  |           1|         1|
+|305   |MIPS_single_cycle_GT309  |           1|         1|
+|306   |MIPS_single_cycle_GT310  |           1|         1|
+|307   |MIPS_single_cycle_GT311  |           1|         1|
+|308   |MIPS_single_cycle_GT312  |           1|         1|
+|309   |MIPS_single_cycle_GT313  |           1|         1|
+|310   |MIPS_single_cycle_GT314  |           1|         1|
+|311   |MIPS_single_cycle_GT315  |           1|         1|
+|312   |MIPS_single_cycle_GT316  |           1|         1|
+|313   |MIPS_single_cycle_GT317  |           1|         1|
+|314   |MIPS_single_cycle_GT319  |           1|         1|
+|315   |MIPS_single_cycle_GT320  |           1|         1|
+|316   |MIPS_single_cycle_GT321  |           1|         1|
+|317   |MIPS_single_cycle_GT322  |           1|         1|
+|318   |MIPS_single_cycle_GT323  |           1|         1|
+|319   |MIPS_single_cycle_GT324  |           1|         1|
+|320   |MIPS_single_cycle_GT325  |           1|         1|
+|321   |MIPS_single_cycle_GT326  |           1|         1|
+|322   |MIPS_single_cycle_GT327  |           1|         1|
+|323   |MIPS_single_cycle_GT0__4 |           1|     20525|
++------+-------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:04:40 ; elapsed = 00:05:37 . Memory (MB): peak = 1583.008 ; gain = 1264.055
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:40 ; elapsed = 00:05:37 . Memory (MB): peak = 1583.008 ; gain = 1264.055
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:43 ; elapsed = 00:05:40 . Memory (MB): peak = 1583.008 ; gain = 1264.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:49 ; elapsed = 00:05:47 . Memory (MB): peak = 1583.008 ; gain = 1264.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:50 ; elapsed = 00:05:48 . Memory (MB): peak = 1583.008 ; gain = 1264.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:50 ; elapsed = 00:05:48 . Memory (MB): peak = 1583.008 ; gain = 1264.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    17|
+|3     |LUT1   |     2|
+|4     |LUT2   |   367|
+|5     |LUT3   |  4063|
+|6     |LUT4   |   670|
+|7     |LUT5   |  2005|
+|8     |LUT6   | 12958|
+|9     |MUXF7  |  4956|
+|10    |MUXF8  |  2133|
+|11    |FDCE   |    30|
+|12    |FDRE   |  9513|
+|13    |IBUF   |     2|
+|14    |OBUF   |     4|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------+--------------+------+
+|      |Instance    |Module        |Cells |
++------+------------+--------------+------+
+|1     |top         |              | 36721|
+|2     |  ALU       |alu           |    57|
+|3     |  Data_mem  |ram_memory    | 23391|
+|4     |  Instr_mem |ram_memory_0  |  1870|
+|5     |  PC        |pc_reg        |  3581|
+|6     |  Reg_file  |register_file |  7815|
++------+------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:50 ; elapsed = 00:05:48 . Memory (MB): peak = 1583.008 ; gain = 1264.055
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:29 ; elapsed = 00:05:38 . Memory (MB): peak = 1583.008 ; gain = 840.152
+Synthesis Optimization Complete : Time (s): cpu = 00:04:50 ; elapsed = 00:05:54 . Memory (MB): peak = 1583.008 ; gain = 1264.055
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 7108 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+272 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:04:57 ; elapsed = 00:06:01 . Memory (MB): peak = 1583.008 ; gain = 1276.691
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'F:/CompArch/Vivado/Single_Cycle_Session1/Single_Cycle_Session1.runs/synth_2/MIPS_single_cycle.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file MIPS_single_cycle_utilization_synth.rpt -pb MIPS_single_cycle_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.319 . Memory (MB): peak = 1583.008 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Oct  9 16:12:53 2026...

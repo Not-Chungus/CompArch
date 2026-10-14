@@ -1,0 +1,375 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/CompArch/MIPS_Processor/Single_Cycle_v2/testing/direct_testing/run
+T_opt
+!s110 1791928700
+VMN`lGS3b_F[oI^g59U[2P2
+04 9 4 work testbench fast 0
+=1-d85ed3a67a6e-6acea97c-160-4a1c
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.6c;65
+valu
+Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z3 DXx4 work 8 mips_pkg 0 22 KAOg_J[WXjiOL8LHhjS=<2
+DXx4 work 11 ALU_sv_unit 0 22 7kh6ZGn<WiJ`^Vf@RN[R90
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 <o]M`a8Lg[RUUlmPh2c3<2
+IY2;f_Mbd?6oSQfKbGh>7;1
+!s105 ALU_sv_unit
+S1
+R0
+Z5 w1791921703
+Z6 8../../../implementation/ALU.sv
+Z7 F../../../implementation/ALU.sv
+L0 3
+Z8 OL;L;10.6c;65
+Z9 !s108 1791928698.000000
+Z10 !s107 ../tb/tb.sv|../../../implementation/TOP.sv|../../../implementation/sign_extender.sv|../../../implementation/reg_file.sv|../../../implementation/RAM_memory.sv|../../../implementation/PC_reg.sv|../../../implementation/multiplier.sv|../../../implementation/divider.sv|../../../implementation/Control_Unit.sv|../../../implementation/ALU.sv|../../../implementation/_defs_pkg.sv|
+Z11 !s90 -sv|../../../implementation/_defs_pkg.sv|../../../implementation/ALU.sv|../../../implementation/Control_Unit.sv|../../../implementation/divider.sv|../../../implementation/multiplier.sv|../../../implementation/PC_reg.sv|../../../implementation/RAM_memory.sv|../../../implementation/reg_file.sv|../../../implementation/sign_extender.sv|../../../implementation/TOP.sv|+incdir+../../../implementation|../tb/tb.sv|
+!i113 0
+Z12 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z13 !s92 -sv +incdir+../../../implementation -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+XALU_sv_unit
+R2
+R3
+V7kh6ZGn<WiJ`^Vf@RN[R90
+r1
+!s85 0
+31
+!i10b 1
+!s100 C@PQ9OFH?I[bK7iZ6`L7i0
+I7kh6ZGn<WiJ`^Vf@RN[R90
+!i103 1
+S1
+R0
+R5
+R6
+R7
+L0 1
+R8
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+n@a@l@u_sv_unit
+XControl_Unit_sv_unit
+R2
+R3
+V^VUAfhg>]PBh6A@]i1G4M3
+r1
+!s85 0
+31
+!i10b 1
+!s100 XYb2k?;WH4827=mK^[>nJ1
+I^VUAfhg>]PBh6A@]i1G4M3
+!i103 1
+S1
+R0
+R5
+Z14 8../../../implementation/Control_Unit.sv
+Z15 F../../../implementation/Control_Unit.sv
+L0 1
+R8
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+n@control_@unit_sv_unit
+vctrl_unit
+R2
+R3
+DXx4 work 20 Control_Unit_sv_unit 0 22 ^VUAfhg>]PBh6A@]i1G4M3
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 :_W^Ko6<SKnh]PlXkzceJ2
+ICm^1^LYa8ihm[OKNi4OjA0
+!s105 Control_Unit_sv_unit
+S1
+R0
+R5
+R14
+R15
+L0 3
+R8
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+vdivider
+R2
+Z16 !s110 1791928698
+!i10b 1
+!s100 k;]lR_F[lJicW:mU361kG3
+I<9OXf48nOKTiGM5[6[ABR1
+R4
+!s105 divider_sv_unit
+S1
+R0
+w1791926358
+8../../../implementation/divider.sv
+F../../../implementation/divider.sv
+L0 29
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+Xmips_pkg
+R2
+R16
+!i10b 1
+!s100 5nzA<VbT8hTeYIDjIS;=41
+IKAOg_J[WXjiOL8LHhjS=<2
+VKAOg_J[WXjiOL8LHhjS=<2
+S1
+R0
+w1791921645
+8../../../implementation/_defs_pkg.sv
+F../../../implementation/_defs_pkg.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+vMIPS_single_cycle
+R2
+R3
+DXx4 work 11 TOP_sv_unit 0 22 8a`b7Y:b@zKKlU>16=ABT1
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 `VFen51M1P7_Pe`8`C>P[1
+Ii07mCzk`VN<A`d`^XU7^o1
+!s105 TOP_sv_unit
+S1
+R0
+Z17 w1791926827
+Z18 8../../../implementation/TOP.sv
+Z19 F../../../implementation/TOP.sv
+L0 3
+R8
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+n@m@i@p@s_single_cycle
+vmultiplier
+R2
+R16
+!i10b 1
+!s100 ZFo84i0lCCLXPgMOR]hd[0
+I?SR=g`c;L]@BIA^?mimOi0
+R4
+!s105 multiplier_sv_unit
+S1
+R0
+w1791919233
+8../../../implementation/multiplier.sv
+F../../../implementation/multiplier.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+vpc_reg
+R2
+R16
+!i10b 1
+!s100 AKD>OO<M8VT7KIh2miho>0
+IKDDn1UaFSEFo7LHjhl<bk1
+R4
+!s105 PC_reg_sv_unit
+S1
+R0
+w1791400321
+8../../../implementation/PC_reg.sv
+F../../../implementation/PC_reg.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+vram_memory
+R2
+R16
+!i10b 1
+!s100 kZ0PgccFie6cNOid>?=3T2
+IMhRCZ0^<Nac1ad@M8lYVH1
+R4
+!s105 RAM_memory_sv_unit
+S1
+R0
+w1791918943
+8../../../implementation/RAM_memory.sv
+F../../../implementation/RAM_memory.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+vregister_file
+R2
+R16
+!i10b 1
+!s100 FA]=h=cNUilYjV`Nj;T1D3
+IF4N0CMz1@W]IYAOQgNhd:0
+R4
+!s105 reg_file_sv_unit
+S1
+R0
+w1791903013
+8../../../implementation/reg_file.sv
+F../../../implementation/reg_file.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+vsign_extend
+R2
+R16
+!i10b 1
+!s100 ToaY45]P[;DY?K[URH:B51
+IXhbMKz2NS7WP1?67PTRhR3
+R4
+!s105 sign_extender_sv_unit
+S1
+R0
+w1791904955
+8../../../implementation/sign_extender.sv
+F../../../implementation/sign_extender.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+vtestbench
+R2
+R16
+!i10b 1
+!s100 BYO0;C^[WYVGVHB:WcLU[2
+I^iBn@_XJMNV0C9]XX`3U>1
+R4
+!s105 tb_sv_unit
+S1
+R0
+w1791924686
+8../tb/tb.sv
+F../tb/tb.sv
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+XTOP_sv_unit
+R2
+R3
+V8a`b7Y:b@zKKlU>16=ABT1
+r1
+!s85 0
+31
+!i10b 1
+!s100 n4aV4eYbk^9KcJC4GK;fQ1
+I8a`b7Y:b@zKKlU>16=ABT1
+!i103 1
+S1
+R0
+R17
+R18
+R19
+L0 1
+R8
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+n@t@o@p_sv_unit

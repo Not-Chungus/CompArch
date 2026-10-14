@@ -1,0 +1,495 @@
+# vsim -c -voptargs="+acc" work.testbench "+TEST=ALL" -sv_seed 1 -do "run -all; quit -f" 
+# Start time: 00:58:20 on Oct 14,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim-64
+# //  Version 10.6c win64 Jul 26 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.mips_pkg(fast)
+# Loading work.TOP_sv_unit(fast)
+# Loading work.MIPS_single_cycle(fast)
+# Loading work.pc_reg(fast)
+# Loading work.ram_memory(fast)
+# Loading work.Control_Unit_sv_unit(fast)
+# Loading work.ctrl_unit(fast)
+# Loading work.register_file(fast)
+# Loading work.ALU_sv_unit(fast)
+# Loading work.alu(fast)
+# Loading work.multiplier(fast)
+# Loading work.divider(fast)
+# Loading work.ram_memory(fast__1)
+# Loading work.sign_extend(fast)
+# run -all
+# [TB] Running tests 1 through 6
+# 
+# ==============================================
+# [TB] STARTING Test1 @ t = 0
+# [TB] Program: ../tests/Test1/Test1.mem
+# ==============================================
+# [TB] Instruction memory loaded.
+# [Cycle 1] PC=00000000 INST=20100af0 ALU_Result=00000af0
+#            REG WRITE: R[16] <= 00000af0
+# [Cycle 2] PC=00000004 INST=201104b0 ALU_Result=000004b0
+#            REG WRITE: R[17] <= 000004b0
+# [Cycle 3] PC=00000008 INST=02119020 ALU_Result=00000fa0
+#            REG WRITE: R[18] <= 00000fa0
+# [Cycle 4] PC=0000000c INST=20080fa0 ALU_Result=00000fa0
+#            REG WRITE: R[8] <= 00000fa0
+# [Cycle 5] PC=00000010 INST=12480001 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000018  @65000
+# [Cycle 6] PC=00000018 INST=02119822 ALU_Result=00000640
+#            REG WRITE: R[19] <= 00000640
+# [Cycle 7] PC=0000001c INST=20090640 ALU_Result=00000640
+#            REG WRITE: R[9] <= 00000640
+# [Cycle 8] PC=00000020 INST=12690001 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000028  @95000
+# [Cycle 9] PC=00000028 INST=0211a024 ALU_Result=000000b0
+#            REG WRITE: R[20] <= 000000b0
+# [Cycle 10] PC=0000002c INST=200a00b0 ALU_Result=000000b0
+#            REG WRITE: R[10] <= 000000b0
+# [Cycle 11] PC=00000030 INST=128a0001 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000038  @125000
+# [Cycle 12] PC=00000038 INST=0211a825 ALU_Result=00000ef0
+#            REG WRITE: R[21] <= 00000ef0
+# [Cycle 13] PC=0000003c INST=200b0ef0 ALU_Result=00000ef0
+#            REG WRITE: R[11] <= 00000ef0
+# [Cycle 14] PC=00000040 INST=12ab0001 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000048  @155000
+# [Cycle 15] PC=00000048 INST=200c0064 ALU_Result=00000064
+#            REG WRITE: R[12] <= 00000064
+# [Cycle 16] PC=0000004c INST=ad900032 ALU_Result=00000096
+#            MEM WRITE: MEM[00000096] <= 00000af0
+# [Cycle 17] PC=00000050 INST=8d8d0032 ALU_Result=00000096
+#            REG WRITE: R[13] <= 00000af0
+# [Cycle 18] PC=00000054 INST=120d0002 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000060  @195000
+# [Cycle 19] PC=00000060 INST=2010d08e ALU_Result=ffffd08e
+#            REG WRITE: R[16] <= ffffd08e
+# [TB] Test1 PASSED after 19 cycles (R16=ffffd08e)
+# 
+# ==============================================
+# [TB] STARTING Test2 @ t = 210000
+# [TB] Program: ../tests/Test2/Test2.mem
+# ==============================================
+# [TB] Instruction memory loaded.
+# [Cycle 1] PC=00000000 INST=201d7ffc ALU_Result=00007ffc
+#            REG WRITE: R[29] <= 00007ffc
+# [Cycle 2] PC=00000004 INST=201c1080 ALU_Result=00001080
+#            REG WRITE: R[28] <= 00001080
+# [Cycle 3] PC=00000008 INST=0c000100 ALU_Result=00000000
+#            REG WRITE: R[31] <= 0000000c
+#            JUMP -> 00000400  @255000
+# [Cycle 4] PC=00000400 INST=23bdfffc ALU_Result=00007ff8
+#            REG WRITE: R[29] <= 00007ff8
+# [Cycle 5] PC=00000404 INST=afbf0000 ALU_Result=00007ff8
+#            MEM WRITE: MEM[00007ff8] <= 0000000c
+# [Cycle 6] PC=00000408 INST=20040002 ALU_Result=00000002
+#            REG WRITE: R[4] <= 00000002
+# [Cycle 7] PC=0000040c INST=af84ff80 ALU_Result=00001000
+#            MEM WRITE: MEM[00001000] <= 00000002
+# [Cycle 8] PC=00000410 INST=20050003 ALU_Result=00000003
+#            REG WRITE: R[5] <= 00000003
+# [Cycle 9] PC=00000414 INST=af85ff84 ALU_Result=00001004
+#            MEM WRITE: MEM[00001004] <= 00000003
+# [Cycle 10] PC=00000418 INST=0c000110 ALU_Result=00000000
+#            REG WRITE: R[31] <= 0000041c
+#            JUMP -> 00000440  @325000
+# [Cycle 11] PC=00000440 INST=00851020 ALU_Result=00000005
+#            REG WRITE: R[2] <= 00000005
+# [Cycle 12] PC=00000444 INST=03e00008 ALU_Result=0000041c
+#            JUMP -> 0000041c  @345000
+# [Cycle 13] PC=0000041c INST=af82ff88 ALU_Result=00001008
+#            MEM WRITE: MEM[00001008] <= 00000005
+# [Cycle 14] PC=00000420 INST=24080005 ALU_Result=00000005
+#            REG WRITE: R[8] <= 00000005
+# [Cycle 15] PC=00000424 INST=10480002 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000430  @375000
+# [Cycle 16] PC=00000430 INST=2010d08e ALU_Result=ffffd08e
+#            REG WRITE: R[16] <= ffffd08e
+# [TB] Test2 PASSED after 16 cycles (R16=ffffd08e)
+# 
+# ==============================================
+# [TB] STARTING Test3 @ t = 390000
+# [TB] Program: ../tests/Test3/Test3_v3.mem
+# ==============================================
+# [TB] Instruction memory loaded.
+# [Cycle 1] PC=00000000 INST=201d7ffc ALU_Result=00007ffc
+#            REG WRITE: R[29] <= 00007ffc
+# [Cycle 2] PC=00000004 INST=201c1080 ALU_Result=00001080
+#            REG WRITE: R[28] <= 00001080
+# [Cycle 3] PC=00000008 INST=0c000100 ALU_Result=00000000
+#            REG WRITE: R[31] <= 0000000c
+#            JUMP -> 00000400  @435000
+# [Cycle 4] PC=00000400 INST=23bdfffc ALU_Result=00007ff8
+#            REG WRITE: R[29] <= 00007ff8
+# [Cycle 5] PC=00000404 INST=afbf0000 ALU_Result=00007ff8
+#            MEM WRITE: MEM[00007ff8] <= 0000000c
+# [Cycle 6] PC=00000408 INST=2004fffc ALU_Result=fffffffc
+#            REG WRITE: R[4] <= fffffffc
+# [Cycle 7] PC=0000040c INST=2005fff0 ALU_Result=fffffff0
+#            REG WRITE: R[5] <= fffffff0
+# [Cycle 8] PC=00000410 INST=2006fff6 ALU_Result=fffffff6
+#            REG WRITE: R[6] <= fffffff6
+# [Cycle 9] PC=00000414 INST=2007ffd8 ALU_Result=ffffffd8
+#            REG WRITE: R[7] <= ffffffd8
+# [Cycle 10] PC=00000418 INST=0c000120 ALU_Result=00000000
+#            REG WRITE: R[31] <= 0000041c
+#            JUMP -> 00000480  @505000
+# [Cycle 11] PC=00000480 INST=23bdfffc ALU_Result=00007ff4
+#            REG WRITE: R[29] <= 00007ff4
+# [Cycle 12] PC=00000484 INST=afa80000 ALU_Result=00007ff4
+#            MEM WRITE: MEM[00007ff4] <= 00000000
+# [Cycle 13] PC=00000488 INST=00854020 ALU_Result=ffffffec
+#            REG WRITE: R[8] <= ffffffec
+# [Cycle 14] PC=0000048c INST=00c74820 ALU_Result=ffffffce
+#            REG WRITE: R[9] <= ffffffce
+# [Cycle 15] PC=00000490 INST=01098022 ALU_Result=0000001e
+#            REG WRITE: R[16] <= 0000001e
+# [Cycle 16] PC=00000494 INST=02001020 ALU_Result=0000001e
+#            REG WRITE: R[2] <= 0000001e
+# [Cycle 17] PC=00000498 INST=8fb00000 ALU_Result=00007ff4
+#            REG WRITE: R[16] <= 00000000
+# [Cycle 18] PC=0000049c INST=23bd0004 ALU_Result=00007ff8
+#            REG WRITE: R[29] <= 00007ff8
+# [Cycle 19] PC=000004a0 INST=03e00008 ALU_Result=0000041c
+#            JUMP -> 0000041c  @595000
+# [Cycle 20] PC=0000041c INST=2011001e ALU_Result=0000001e
+#            REG WRITE: R[17] <= 0000001e
+# [Cycle 21] PC=00000420 INST=10510001 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000428  @615000
+# [Cycle 22] PC=00000428 INST=20042710 ALU_Result=00002710
+#            REG WRITE: R[4] <= 00002710
+# [Cycle 23] PC=0000042c INST=200507d0 ALU_Result=000007d0
+#            REG WRITE: R[5] <= 000007d0
+# [Cycle 24] PC=00000430 INST=20061b58 ALU_Result=00001b58
+#            REG WRITE: R[6] <= 00001b58
+# [Cycle 25] PC=00000434 INST=20071b58 ALU_Result=00001b58
+#            REG WRITE: R[7] <= 00001b58
+# [Cycle 26] PC=00000438 INST=201704a4 ALU_Result=000004a4
+#            REG WRITE: R[23] <= 000004a4
+# [Cycle 27] PC=0000043c INST=02e00009 ALU_Result=000004a4
+#            REG WRITE: R[31] <= 00000440
+#            JUMP -> 000004a4  @675000
+# [Cycle 28] PC=000004a4 INST=00854021 ALU_Result=00002ee0
+#            REG WRITE: R[8] <= 00002ee0
+# [Cycle 29] PC=000004a8 INST=00c74821 ALU_Result=000036b0
+#            REG WRITE: R[9] <= 000036b0
+# [Cycle 30] PC=000004ac INST=01091023 ALU_Result=fffff830
+#            REG WRITE: R[2] <= fffff830
+# [Cycle 31] PC=000004b0 INST=03e00008 ALU_Result=00000440
+#            JUMP -> 00000440  @715000
+# [Cycle 32] PC=00000440 INST=2012f830 ALU_Result=fffff830
+#            REG WRITE: R[18] <= fffff830
+# [Cycle 33] PC=00000444 INST=14520008 ALU_Result=00000000
+# [Cycle 34] PC=00000448 INST=3c04a5a5 ALU_Result=00002710
+#            REG WRITE: R[4] <= a5a50000
+# [Cycle 35] PC=0000044c INST=34845a5a ALU_Result=a5a55a5a
+#            REG WRITE: R[4] <= a5a55a5a
+# [Cycle 36] PC=00000450 INST=3c05aaaa ALU_Result=000007d0
+#            REG WRITE: R[5] <= aaaa0000
+# [Cycle 37] PC=00000454 INST=34a55555 ALU_Result=aaaa5555
+#            REG WRITE: R[5] <= aaaa5555
+# [Cycle 38] PC=00000458 INST=0c00012d ALU_Result=00000000
+#            REG WRITE: R[31] <= 0000045c
+#            JUMP -> 000004b4  @785000
+# [Cycle 39] PC=000004b4 INST=00854024 ALU_Result=a0a05050
+#            REG WRITE: R[8] <= a0a05050
+# [Cycle 40] PC=000004b8 INST=00884826 ALU_Result=05050a0a
+#            REG WRITE: R[9] <= 05050a0a
+# [Cycle 41] PC=000004bc INST=01095025 ALU_Result=a5a55a5a
+#            REG WRITE: R[10] <= a5a55a5a
+# [Cycle 42] PC=000004c0 INST=012a5827 ALU_Result=5a5aa5a5
+#            REG WRITE: R[11] <= 5a5aa5a5
+# [Cycle 43] PC=000004c4 INST=0109602a ALU_Result=00000001
+#            REG WRITE: R[12] <= 00000001
+# [Cycle 44] PC=000004c8 INST=1d800001 ALU_Result=00000000
+#            BRANCH TAKEN -> 000004d0  @845000
+# [Cycle 45] PC=000004d0 INST=19800006 ALU_Result=00000000
+# [Cycle 46] PC=000004d4 INST=0109682b ALU_Result=00000000
+#            REG WRITE: R[13] <= 00000000
+# [Cycle 47] PC=000004d8 INST=05a10001 ALU_Result=00000000
+#            BRANCH TAKEN -> 000004e0  @875000
+# [Cycle 48] PC=000004e0 INST=05a00002 ALU_Result=00000000
+# [Cycle 49] PC=000004e4 INST=01601821 ALU_Result=5a5aa5a5
+#            REG WRITE: R[3] <= 5a5aa5a5
+# [Cycle 50] PC=000004e8 INST=03e00008 ALU_Result=0000045c
+#            JUMP -> 0000045c  @905000
+# [Cycle 51] PC=0000045c INST=3c135a5a ALU_Result=00000000
+#            REG WRITE: R[19] <= 5a5a0000
+# [Cycle 52] PC=00000460 INST=3673a5a5 ALU_Result=5a5aa5a5
+#            REG WRITE: R[19] <= 5a5aa5a5
+# [Cycle 53] PC=00000464 INST=10730002 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000470  @935000
+# [Cycle 54] PC=00000470 INST=2010d08e ALU_Result=ffffd08e
+#            REG WRITE: R[16] <= ffffd08e
+# [TB] Test3 PASSED after 54 cycles (R16=ffffd08e)
+# 
+# ==============================================
+# [TB] STARTING Test4 @ t = 950000
+# [TB] Program: ../tests/Test4/Test4_v2.mem
+# ==============================================
+# [TB] Instruction memory loaded.
+# [Cycle 1] PC=00000000 INST=201d7ffc ALU_Result=00007ffc
+#            REG WRITE: R[29] <= 00007ffc
+# [Cycle 2] PC=00000004 INST=201c1080 ALU_Result=00001080
+#            REG WRITE: R[28] <= 00001080
+# [Cycle 3] PC=00000008 INST=0c000100 ALU_Result=00000000
+#            REG WRITE: R[31] <= 0000000c
+#            JUMP -> 00000400  @995000
+# [Cycle 4] PC=00000400 INST=23bdfffc ALU_Result=00007ff8
+#            REG WRITE: R[29] <= 00007ff8
+# [Cycle 5] PC=00000404 INST=afbf0000 ALU_Result=00007ff8
+#            MEM WRITE: MEM[00007ff8] <= 0000000c
+# [Cycle 6] PC=00000408 INST=3c04a5a5 ALU_Result=00000000
+#            REG WRITE: R[4] <= a5a50000
+# [Cycle 7] PC=0000040c INST=34845a5a ALU_Result=a5a55a5a
+#            REG WRITE: R[4] <= a5a55a5a
+# [Cycle 8] PC=00000410 INST=0c000111 ALU_Result=00000000
+#            REG WRITE: R[31] <= 00000414
+#            JUMP -> 00000444  @1045000
+# [Cycle 9] PC=00000444 INST=2088aaaa ALU_Result=a5a50504
+#            REG WRITE: R[8] <= a5a50504
+# [Cycle 10] PC=00000448 INST=2489aaaa ALU_Result=a5a50504
+#            REG WRITE: R[9] <= a5a50504
+# [Cycle 11] PC=0000044c INST=3c0aa5a5 ALU_Result=00000000
+#            REG WRITE: R[10] <= a5a50000
+# [Cycle 12] PC=00000450 INST=354a0504 ALU_Result=a5a50504
+#            REG WRITE: R[10] <= a5a50504
+# [Cycle 13] PC=00000454 INST=110a0001 ALU_Result=00000000
+#            BRANCH TAKEN -> 0000045c  @1095000
+# [Cycle 14] PC=0000045c INST=112a0001 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000464  @1105000
+# [Cycle 15] PC=00000464 INST=25620001 ALU_Result=00000001
+#            REG WRITE: R[2] <= 00000001
+# [Cycle 16] PC=00000468 INST=03e00008 ALU_Result=00000414
+#            JUMP -> 00000414  @1125000
+# [Cycle 17] PC=00000414 INST=1c400001 ALU_Result=00000000
+#            BRANCH TAKEN -> 0000041c  @1135000
+# [Cycle 18] PC=0000041c INST=0c00011d ALU_Result=00000000
+#            REG WRITE: R[31] <= 00000420
+#            JUMP -> 00000474  @1145000
+# [Cycle 19] PC=00000474 INST=30885555 ALU_Result=00005050
+#            REG WRITE: R[8] <= 00005050
+# [Cycle 20] PC=00000478 INST=39095a5a ALU_Result=00000a0a
+#            REG WRITE: R[9] <= 00000a0a
+# [Cycle 21] PC=0000047c INST=352a5050 ALU_Result=00005a5a
+#            REG WRITE: R[10] <= 00005a5a
+# [Cycle 22] PC=00000480 INST=012a5827 ALU_Result=ffffa5a5
+#            REG WRITE: R[11] <= ffffa5a5
+# [Cycle 23] PC=00000484 INST=290c5a5a ALU_Result=00000001
+#            REG WRITE: R[12] <= 00000001
+# [Cycle 24] PC=00000488 INST=1d800001 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000490  @1205000
+# [Cycle 25] PC=00000490 INST=2d0dffff ALU_Result=00000001
+#            REG WRITE: R[13] <= 00000001
+# [Cycle 26] PC=00000494 INST=05a10001 ALU_Result=00000000
+#            BRANCH TAKEN -> 0000049c  @1225000
+# [Cycle 27] PC=0000049c INST=01601821 ALU_Result=ffffa5a5
+#            REG WRITE: R[3] <= ffffa5a5
+# [Cycle 28] PC=000004a0 INST=03e00008 ALU_Result=00000420
+#            JUMP -> 00000420  @1245000
+# [Cycle 29] PC=00000420 INST=3c13ffff ALU_Result=00000000
+#            REG WRITE: R[19] <= ffff0000
+# [Cycle 30] PC=00000424 INST=3673a5a5 ALU_Result=ffffa5a5
+#            REG WRITE: R[19] <= ffffa5a5
+# [Cycle 31] PC=00000428 INST=10730002 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000434  @1275000
+# [Cycle 32] PC=00000434 INST=2010d08e ALU_Result=ffffd08e
+#            REG WRITE: R[16] <= ffffd08e
+# [TB] Test4 PASSED after 32 cycles (R16=ffffd08e)
+# 
+# ==============================================
+# [TB] STARTING Test5 @ t = 1290000
+# [TB] Program: ../tests/Test5/Test5.mem
+# ==============================================
+# [TB] Instruction memory loaded.
+# [Cycle 1] PC=00000000 INST=201d7ffc ALU_Result=00007ffc
+#            REG WRITE: R[29] <= 00007ffc
+# [Cycle 2] PC=00000004 INST=201c1080 ALU_Result=00001080
+#            REG WRITE: R[28] <= 00001080
+# [Cycle 3] PC=00000008 INST=0c000100 ALU_Result=00000000
+#            REG WRITE: R[31] <= 0000000c
+#            JUMP -> 00000400  @1335000
+# [Cycle 4] PC=00000400 INST=23bdfffc ALU_Result=00007ff8
+#            REG WRITE: R[29] <= 00007ff8
+# [Cycle 5] PC=00000404 INST=afbf0000 ALU_Result=00007ff8
+#            MEM WRITE: MEM[00007ff8] <= 0000000c
+# [Cycle 6] PC=00000408 INST=3c04a5a5 ALU_Result=00000000
+#            REG WRITE: R[4] <= a5a50000
+# [Cycle 7] PC=0000040c INST=34845a5a ALU_Result=a5a55a5a
+#            REG WRITE: R[4] <= a5a55a5a
+# [Cycle 8] PC=00000410 INST=2005acac ALU_Result=ffffacac
+#            REG WRITE: R[5] <= ffffacac
+# [Cycle 9] PC=00000414 INST=0c00010d ALU_Result=00000000
+#            REG WRITE: R[31] <= 00000418
+#            JUMP -> 00000434  @1395000
+# [Cycle 10] PC=00000434 INST=00044300 ALU_Result=55a5a000
+#            REG WRITE: R[8] <= 55a5a000
+# [Cycle 11] PC=00000438 INST=00a44804 ALU_Result=55a5a000
+#            REG WRITE: R[9] <= 55a5a000
+# [Cycle 12] PC=0000043c INST=3c0a55a5 ALU_Result=00000000
+#            REG WRITE: R[10] <= 55a50000
+# [Cycle 13] PC=00000440 INST=354aa000 ALU_Result=55a5a000
+#            REG WRITE: R[10] <= 55a5a000
+# [Cycle 14] PC=00000444 INST=11480001 ALU_Result=00000000
+#            BRANCH TAKEN -> 0000044c  @1445000
+# [Cycle 15] PC=0000044c INST=11490001 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000454  @1455000
+# [Cycle 16] PC=00000454 INST=00044302 ALU_Result=000a5a55
+#            REG WRITE: R[8] <= 000a5a55
+# [Cycle 17] PC=00000458 INST=00a44806 ALU_Result=000a5a55
+#            REG WRITE: R[9] <= 000a5a55
+# [Cycle 18] PC=0000045c INST=3c0a000a ALU_Result=55a5a000
+#            REG WRITE: R[10] <= 000a0000
+# [Cycle 19] PC=00000460 INST=354a5a55 ALU_Result=000a5a55
+#            REG WRITE: R[10] <= 000a5a55
+# [Cycle 20] PC=00000464 INST=11480001 ALU_Result=00000000
+#            BRANCH TAKEN -> 0000046c  @1505000
+# [Cycle 21] PC=0000046c INST=11490001 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000474  @1515000
+# [Cycle 22] PC=00000474 INST=00044303 ALU_Result=fffa5a55
+#            REG WRITE: R[8] <= fffa5a55
+# [Cycle 23] PC=00000478 INST=00a44807 ALU_Result=fffa5a55
+#            REG WRITE: R[9] <= fffa5a55
+# [Cycle 24] PC=0000047c INST=3c0afffa ALU_Result=000a5a55
+#            REG WRITE: R[10] <= fffa0000
+# [Cycle 25] PC=00000480 INST=354a5a55 ALU_Result=fffa5a55
+#            REG WRITE: R[10] <= fffa5a55
+# [Cycle 26] PC=00000484 INST=11480001 ALU_Result=00000000
+#            BRANCH TAKEN -> 0000048c  @1565000
+# [Cycle 27] PC=0000048c INST=11490001 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000494  @1575000
+# [Cycle 28] PC=00000494 INST=24020001 ALU_Result=00000001
+#            REG WRITE: R[2] <= 00000001
+# [Cycle 29] PC=00000498 INST=03e00008 ALU_Result=00000418
+#            JUMP -> 00000418  @1595000
+# [Cycle 30] PC=00000418 INST=1c400002 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000424  @1605000
+# [Cycle 31] PC=00000424 INST=2010d08e ALU_Result=ffffd08e
+#            REG WRITE: R[16] <= ffffd08e
+# [TB] Test5 PASSED after 31 cycles (R16=ffffd08e)
+# 
+# ==============================================
+# [TB] STARTING Test6 @ t = 1620000
+# [TB] Program: ../tests/Test6/Test6_mul_div_v2.mem
+# ==============================================
+# [TB] Instruction memory loaded.
+# [Cycle 1] PC=00000000 INST=201d7ffc ALU_Result=00007ffc
+#            REG WRITE: R[29] <= 00007ffc
+# [Cycle 2] PC=00000004 INST=201c1080 ALU_Result=00001080
+#            REG WRITE: R[28] <= 00001080
+# [Cycle 3] PC=00000008 INST=0c000100 ALU_Result=00000000
+#            REG WRITE: R[31] <= 0000000c
+#            JUMP -> 00000400  @1665000
+# [Cycle 4] PC=00000400 INST=3c08aaaa ALU_Result=00000000
+#            REG WRITE: R[8] <= aaaa0000
+# [Cycle 5] PC=00000404 INST=35085555 ALU_Result=aaaa5555
+#            REG WRITE: R[8] <= aaaa5555
+# [Cycle 6] PC=00000408 INST=3c093c3c ALU_Result=00000000
+#            REG WRITE: R[9] <= 3c3c0000
+# [Cycle 7] PC=0000040c INST=3529c3c3 ALU_Result=3c3cc3c3
+#            REG WRITE: R[9] <= 3c3cc3c3
+# [Cycle 8] PC=00000410 INST=3c0aaaaa ALU_Result=00000000
+#            REG WRITE: R[10] <= aaaa0000
+# [Cycle 9] PC=00000414 INST=354abebf ALU_Result=aaaabebf
+#            REG WRITE: R[10] <= aaaabebf
+# [Cycle 10] PC=00000418 INST=3c0bebeb ALU_Result=00000000
+#            REG WRITE: R[11] <= ebeb0000
+# [Cycle 11] PC=0000041c INST=356baaaa ALU_Result=ebebaaaa
+#            REG WRITE: R[11] <= ebebaaaa
+# [Cycle 12] PC=00000420 INST=3c0c2828 ALU_Result=00000000
+#            REG WRITE: R[12] <= 28280000
+# [Cycle 13] PC=00000424 INST=358c6e6d ALU_Result=28286e6d
+#            REG WRITE: R[12] <= 28286e6d
+# [Cycle 14] PC=00000428 INST=71098002 ALU_Result=e6e71918
+#            REG WRITE: R[16] <= aaaabebf
+# [Cycle 15] PC=0000042c INST=120a0001 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000434  @1785000
+# [Cycle 16] PC=00000434 INST=01090018 ALU_Result=e6e71918
+# [Cycle 17] PC=00000438 INST=00008810 ALU_Result=00000000
+#            REG WRITE: R[17] <= ebebaaaa
+# [Cycle 18] PC=0000043c INST=00009012 ALU_Result=00000000
+#            REG WRITE: R[18] <= aaaabebf
+# [Cycle 19] PC=00000440 INST=122b0001 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000448  @1825000
+# [Cycle 20] PC=00000448 INST=124a0001 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000450  @1835000
+# [Cycle 21] PC=00000450 INST=01090019 ALU_Result=e6e71918
+# [Cycle 22] PC=00000454 INST=00009810 ALU_Result=00000000
+#            REG WRITE: R[19] <= 28286e6d
+# [Cycle 23] PC=00000458 INST=0000a012 ALU_Result=00000000
+#            REG WRITE: R[20] <= aaaabebf
+# [Cycle 24] PC=0000045c INST=126c0001 ALU_Result=00000000
+#            BRANCH TAKEN -> 00000464  @1875000
+# [Cycle 25] PC=00000464 INST=128a0001 ALU_Result=00000000
+#            BRANCH TAKEN -> 0000046c  @1885000
+# [Cycle 26] PC=0000046c INST=312900ff ALU_Result=000000c3
+#            REG WRITE: R[9] <= 000000c3
+# [Cycle 27] PC=00000470 INST=3c0affff ALU_Result=aaaabebf
+#            REG WRITE: R[10] <= ffff0000
+# [Cycle 28] PC=00000474 INST=354affa5 ALU_Result=ffffffa5
+#            REG WRITE: R[10] <= ffffffa5
+# [Cycle 29] PC=00000478 INST=3c0bff8f ALU_Result=ebebaaaa
+#            REG WRITE: R[11] <= ff8f0000
+# [Cycle 30] PC=0000047c INST=356bf890 ALU_Result=ff8ff890
+#            REG WRITE: R[11] <= ff8ff890
+# [Cycle 31] PC=00000480 INST=3c0c0000 ALU_Result=28286e6d
+#            REG WRITE: R[12] <= 00000000
+# [Cycle 32] PC=00000484 INST=358c00a5 ALU_Result=000000a5
+#            REG WRITE: R[12] <= 000000a5
+# [Cycle 33] PC=00000488 INST=3c0d00e0 ALU_Result=00000000
+#            REG WRITE: R[13] <= 00e00000
+# [Cycle 34] PC=0000048c INST=35ad0d90 ALU_Result=00e00d90
+#            REG WRITE: R[13] <= 00e00d90
+# [Cycle 35] PC=00000490 INST=0109001a ALU_Result=aaaa5618
+# [Cycle 36] PC=00000494 INST=00009010 ALU_Result=00000000
+#            REG WRITE: R[18] <= ffffffa5
+# [Cycle 37] PC=00000498 INST=00009812 ALU_Result=00000000
+#            REG WRITE: R[19] <= ff8ff890
+# [Cycle 38] PC=0000049c INST=124a0001 ALU_Result=00000000
+#            BRANCH TAKEN -> 000004a4  @2015000
+# [Cycle 39] PC=000004a4 INST=126b0001 ALU_Result=00000000
+#            BRANCH TAKEN -> 000004ac  @2025000
+# [Cycle 40] PC=000004ac INST=0109001b ALU_Result=aaaa5618
+# [Cycle 41] PC=000004b0 INST=0000a010 ALU_Result=00000000
+#            REG WRITE: R[20] <= 000000a5
+# [Cycle 42] PC=000004b4 INST=0000a812 ALU_Result=00000000
+#            REG WRITE: R[21] <= 00e00d90
+# [Cycle 43] PC=000004b8 INST=128c0001 ALU_Result=00000000
+#            BRANCH TAKEN -> 000004c0  @2065000
+# [Cycle 44] PC=000004c0 INST=12ad0001 ALU_Result=00000000
+#            BRANCH TAKEN -> 000004c8  @2075000
+# [Cycle 45] PC=000004c8 INST=02a00011 ALU_Result=00e00d90
+# [Cycle 46] PC=000004cc INST=02800013 ALU_Result=000000a5
+# [Cycle 47] PC=000004d0 INST=0000b010 ALU_Result=00000000
+#            REG WRITE: R[22] <= 00e00d90
+# [Cycle 48] PC=000004d4 INST=0000b812 ALU_Result=00000000
+#            REG WRITE: R[23] <= 000000a5
+# [Cycle 49] PC=000004d8 INST=12b60001 ALU_Result=00000000
+#            BRANCH TAKEN -> 000004e0  @2125000
+# [Cycle 50] PC=000004e0 INST=12970002 ALU_Result=00000000
+#            BRANCH TAKEN -> 000004ec  @2135000
+# [Cycle 51] PC=000004ec INST=2410d08e ALU_Result=ffffd08e
+#            REG WRITE: R[16] <= ffffd08e
+# [TB] Test6 PASSED after 51 cycles (R16=ffffd08e)
+# 
+# ==============================================
+#              FINAL TEST SUMMARY
+#        PASSED: 6     FAILED: 0
+# ==============================================
+# ** Note: $finish    : ../tb/tb.sv(168)
+#    Time: 2150 ns  Iteration: 1  Instance: /testbench
+# End time: 00:58:21 on Oct 14,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

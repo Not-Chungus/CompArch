@@ -1,0 +1,602 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Oct  8 17:56:55 2026
+# Process ID: 18868
+# Current directory: F:/CompArch/Vivado/Single_Cycle_Session1/Single_Cycle_Session1.runs/synth_1
+# Command line: vivado.exe -log MIPS_single_cycle.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MIPS_single_cycle.tcl
+# Log file: F:/CompArch/Vivado/Single_Cycle_Session1/Single_Cycle_Session1.runs/synth_1/MIPS_single_cycle.vds
+# Journal file: F:/CompArch/Vivado/Single_Cycle_Session1/Single_Cycle_Session1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source MIPS_single_cycle.tcl -notrace
+Command: synth_design -top MIPS_single_cycle -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9720 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 415.070 ; gain = 96.730
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'MIPS_single_cycle' [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/TOP.sv:1]
+	Parameter depth bound to: 1024 - type: integer 
+	Parameter width bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pc_reg' [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/PC_reg.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'pc_reg' (1#1) [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/PC_reg.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'ram_memory' [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/RAM_memory.sv:1]
+	Parameter depth bound to: 1024 - type: integer 
+	Parameter width bound to: 8 - type: integer 
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "mem_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'ram_memory' (2#1) [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/RAM_memory.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'ctrl_unit' [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/Control_Unit.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'ctrl_unit' (3#1) [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/Control_Unit.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/reg_file.sv:1]
+INFO: [Synth 8-6085] Hierarchical reference on 'register_file' stops possible memory inference [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/reg_file.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (4#1) [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/reg_file.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/ALU.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (5#1) [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/ALU.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_extend' [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/sign_extender.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend' (6#1) [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/sign_extender.sv:1]
+INFO: [Synth 8-6085] Hierarchical reference on 'register_file' stops possible memory inference [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/reg_file.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'MIPS_single_cycle' (7#1) [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/TOP.sv:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 676.094 ; gain = 357.754
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 676.094 ; gain = 357.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 676.094 ; gain = 357.754
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/CompArch/Vivado/Single_Cycle_Session1/Single_Cycle_Session1.srcs/constrs_1/imports/Vivado/ZYBO_Master.xdc]
+Finished Parsing XDC File [F:/CompArch/Vivado/Single_Cycle_Session1/Single_Cycle_Session1.srcs/constrs_1/imports/Vivado/ZYBO_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/CompArch/Vivado/Single_Cycle_Session1/Single_Cycle_Session1.srcs/constrs_1/imports/Vivado/ZYBO_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/MIPS_single_cycle_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/MIPS_single_cycle_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1100.469 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1100.469 ; gain = 782.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1100.469 ; gain = 782.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1100.469 ; gain = 782.129
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "mem_to_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "branch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_write" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "alu_op" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "alu_src" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "reg_dst" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "reg_write" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "jump" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [F:/CompArch/MIPS_Processor/Single_Cycle_v1/implementation/ALU.sv:11]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:10 ; elapsed = 00:01:17 . Memory (MB): peak = 1100.469 ; gain = 782.129
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------+------------+----------+
+|      |RTL Partition          |Replication |Instances |
++------+-----------------------+------------+----------+
+|1     |ram_memory__GBM0       |           1|     35683|
+|2     |ram_memory__GBM1       |           1|     12421|
+|3     |ram_memory__GBM2       |           1|     14901|
+|4     |ram_memory__GBM3       |           1|     18365|
+|5     |ram_memory__GBM4       |           1|     22697|
+|6     |ram_memory__GBM5       |           1|     28748|
+|7     |MIPS_single_cycle__GC0 |           1|     10328|
++------+-----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 33    
+	                8 Bit    Registers := 2048  
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 42    
+	   6 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2040  
+	   4 Input      8 Bit        Muxes := 1144  
+	   2 Input      5 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 120   
+	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2036  
+	   5 Input      1 Bit        Muxes := 1536  
+	   4 Input      1 Bit        Muxes := 512   
+	   7 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module MIPS_single_cycle 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 1     
+Module ram_memory 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1024  
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1020  
+	   4 Input      8 Bit        Muxes := 572   
+	   4 Input      2 Bit        Muxes := 60    
+	   2 Input      1 Bit        Muxes := 1018  
+	   5 Input      1 Bit        Muxes := 768   
+	   4 Input      1 Bit        Muxes := 256   
+Module pc_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module ctrl_unit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      3 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 7     
+Module register_file 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 39    
+Module alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   6 Input     32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Control_unit/alu_op" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:51 ; elapsed = 00:02:22 . Memory (MB): peak = 1100.469 ; gain = 782.129
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------+------------+----------+
+|      |RTL Partition          |Replication |Instances |
++------+-----------------------+------------+----------+
+|1     |ram_memory__GBM0       |           2|     26259|
+|2     |ram_memory__GBM1       |           2|      3095|
+|3     |ram_memory__GBM2       |           2|      3773|
+|4     |ram_memory__GBM3       |           2|      4233|
+|5     |ram_memory__GBM4       |           2|      5024|
+|6     |ram_memory__GBM5       |           2|      6321|
+|7     |MIPS_single_cycle__GC0 |           1|      5162|
++------+-----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:59 ; elapsed = 00:02:32 . Memory (MB): peak = 1100.469 ; gain = 782.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1021][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1021][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1021][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1021][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1021][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1021][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1021][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1021][7] )
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[1][0]' (FDE) to 'Instr_memi_6/mem_reg[1][1]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[1][1]' (FDE) to 'Instr_memi_6/mem_reg[1][2]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[1][2]' (FDE) to 'Instr_memi_6/mem_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[1][3]' (FDE) to 'Instr_memi_6/mem_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[1][4]' (FDE) to 'Instr_memi_6/mem_reg[1][5]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[1][5]' (FDE) to 'Instr_memi_6/mem_reg[1][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[1][6]' (FDE) to 'Instr_memi_6/mem_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[1][7]' (FDE) to 'Instr_memi_6/mem_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[2][0]' (FDE) to 'Instr_memi_6/mem_reg[2][1]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[2][1]' (FDE) to 'Instr_memi_6/mem_reg[2][2]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[2][2]' (FDE) to 'Instr_memi_6/mem_reg[2][3]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[2][3]' (FDE) to 'Instr_memi_6/mem_reg[2][4]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[2][4]' (FDE) to 'Instr_memi_6/mem_reg[2][5]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[2][5]' (FDE) to 'Instr_memi_6/mem_reg[2][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_6/mem_reg[2][6]' (FDE) to 'Instr_memi_6/mem_reg[2][7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[2][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[3][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[3][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[3][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[3][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[3][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[3][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[3][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[3][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[4][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[4][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[4][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[4][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[4][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[4][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[4][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[4][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1019][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1019][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1019][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1019][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1019][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1019][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1019][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1019][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[7][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[7][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[7][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[7][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[7][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[7][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[7][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[7][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[8][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[8][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[8][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[8][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[8][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[8][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[8][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[8][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[9][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[9][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[9][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[9][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[9][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[9][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[9][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1015][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1015][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1015][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1015][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1015][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1015][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1015][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1015][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[11][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[11][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[11][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[11][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[11][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[11][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[11][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[11][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1014][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1014][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1014][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1014][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1014][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1014][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1014][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1014][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[13][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[13][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[13][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[13][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[13][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[13][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[13][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[13][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1010][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1010][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1010][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1010][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1010][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1010][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1010][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1010][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1006][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1006][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Instr_memi_6/\mem_reg[1006][2] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[513][0]' (FDE) to 'Instr_memi_5/mem_reg[513][1]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[513][1]' (FDE) to 'Instr_memi_5/mem_reg[513][2]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[513][2]' (FDE) to 'Instr_memi_5/mem_reg[513][3]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[513][3]' (FDE) to 'Instr_memi_5/mem_reg[513][4]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[513][4]' (FDE) to 'Instr_memi_5/mem_reg[513][5]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[513][5]' (FDE) to 'Instr_memi_5/mem_reg[513][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[513][6]' (FDE) to 'Instr_memi_5/mem_reg[513][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[513][7]' (FDE) to 'Instr_memi_5/mem_reg[514][0]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[514][0]' (FDE) to 'Instr_memi_5/mem_reg[514][1]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[514][1]' (FDE) to 'Instr_memi_5/mem_reg[514][2]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[514][2]' (FDE) to 'Instr_memi_5/mem_reg[514][3]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[514][3]' (FDE) to 'Instr_memi_5/mem_reg[514][4]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[514][4]' (FDE) to 'Instr_memi_5/mem_reg[514][5]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[514][5]' (FDE) to 'Instr_memi_5/mem_reg[514][6]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_5/mem_reg[514][6]' (FDE) to 'Instr_memi_5/mem_reg[514][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[292][0]' (FDE) to 'Instr_memi_4/mem_reg[292][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[292][1]' (FDE) to 'Instr_memi_4/mem_reg[292][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[292][2]' (FDE) to 'Instr_memi_4/mem_reg[292][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[292][3]' (FDE) to 'Instr_memi_4/mem_reg[292][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[292][4]' (FDE) to 'Instr_memi_4/mem_reg[292][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[292][5]' (FDE) to 'Instr_memi_4/mem_reg[292][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[292][6]' (FDE) to 'Instr_memi_4/mem_reg[292][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[532][0]' (FDE) to 'Instr_memi_4/mem_reg[532][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[532][1]' (FDE) to 'Instr_memi_4/mem_reg[532][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[532][2]' (FDE) to 'Instr_memi_4/mem_reg[532][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[532][3]' (FDE) to 'Instr_memi_4/mem_reg[532][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[532][4]' (FDE) to 'Instr_memi_4/mem_reg[532][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[532][5]' (FDE) to 'Instr_memi_4/mem_reg[532][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[532][6]' (FDE) to 'Instr_memi_4/mem_reg[532][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[527][0]' (FDE) to 'Instr_memi_4/mem_reg[527][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[527][1]' (FDE) to 'Instr_memi_4/mem_reg[527][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[527][2]' (FDE) to 'Instr_memi_4/mem_reg[527][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[527][3]' (FDE) to 'Instr_memi_4/mem_reg[527][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[527][4]' (FDE) to 'Instr_memi_4/mem_reg[527][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[527][5]' (FDE) to 'Instr_memi_4/mem_reg[527][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[527][6]' (FDE) to 'Instr_memi_4/mem_reg[527][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[591][0]' (FDE) to 'Instr_memi_4/mem_reg[591][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[591][1]' (FDE) to 'Instr_memi_4/mem_reg[591][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[591][2]' (FDE) to 'Instr_memi_4/mem_reg[591][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[591][3]' (FDE) to 'Instr_memi_4/mem_reg[591][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[591][4]' (FDE) to 'Instr_memi_4/mem_reg[591][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[591][5]' (FDE) to 'Instr_memi_4/mem_reg[591][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[591][6]' (FDE) to 'Instr_memi_4/mem_reg[591][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[181][0]' (FDE) to 'Instr_memi_4/mem_reg[181][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[181][1]' (FDE) to 'Instr_memi_4/mem_reg[181][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[181][2]' (FDE) to 'Instr_memi_4/mem_reg[181][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[181][3]' (FDE) to 'Instr_memi_4/mem_reg[181][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[181][4]' (FDE) to 'Instr_memi_4/mem_reg[181][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[181][5]' (FDE) to 'Instr_memi_4/mem_reg[181][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[181][6]' (FDE) to 'Instr_memi_4/mem_reg[181][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[179][0]' (FDE) to 'Instr_memi_4/mem_reg[179][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[179][1]' (FDE) to 'Instr_memi_4/mem_reg[179][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[179][2]' (FDE) to 'Instr_memi_4/mem_reg[179][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[179][3]' (FDE) to 'Instr_memi_4/mem_reg[179][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[179][4]' (FDE) to 'Instr_memi_4/mem_reg[179][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[179][5]' (FDE) to 'Instr_memi_4/mem_reg[179][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[179][6]' (FDE) to 'Instr_memi_4/mem_reg[179][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[622][0]' (FDE) to 'Instr_memi_4/mem_reg[622][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[622][1]' (FDE) to 'Instr_memi_4/mem_reg[622][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[622][2]' (FDE) to 'Instr_memi_4/mem_reg[622][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[622][3]' (FDE) to 'Instr_memi_4/mem_reg[622][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[622][4]' (FDE) to 'Instr_memi_4/mem_reg[622][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[622][5]' (FDE) to 'Instr_memi_4/mem_reg[622][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[622][6]' (FDE) to 'Instr_memi_4/mem_reg[622][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[623][0]' (FDE) to 'Instr_memi_4/mem_reg[623][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[623][1]' (FDE) to 'Instr_memi_4/mem_reg[623][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[623][2]' (FDE) to 'Instr_memi_4/mem_reg[623][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[623][3]' (FDE) to 'Instr_memi_4/mem_reg[623][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[623][4]' (FDE) to 'Instr_memi_4/mem_reg[623][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[623][5]' (FDE) to 'Instr_memi_4/mem_reg[623][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[623][6]' (FDE) to 'Instr_memi_4/mem_reg[623][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[218][0]' (FDE) to 'Instr_memi_4/mem_reg[218][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[218][1]' (FDE) to 'Instr_memi_4/mem_reg[218][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[218][2]' (FDE) to 'Instr_memi_4/mem_reg[218][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[218][3]' (FDE) to 'Instr_memi_4/mem_reg[218][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[218][4]' (FDE) to 'Instr_memi_4/mem_reg[218][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[218][5]' (FDE) to 'Instr_memi_4/mem_reg[218][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[218][6]' (FDE) to 'Instr_memi_4/mem_reg[218][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[424][0]' (FDE) to 'Instr_memi_4/mem_reg[424][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[424][1]' (FDE) to 'Instr_memi_4/mem_reg[424][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[424][2]' (FDE) to 'Instr_memi_4/mem_reg[424][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[424][3]' (FDE) to 'Instr_memi_4/mem_reg[424][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[424][4]' (FDE) to 'Instr_memi_4/mem_reg[424][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[424][5]' (FDE) to 'Instr_memi_4/mem_reg[424][7]'
+INFO: [Synth 8-3886] merging instance 'Instr_memi_4/mem_reg[424][6]' (FDE) to 'Instr_memi_4/mem_reg[424][7]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:03 ; elapsed = 00:02:36 . Memory (MB): peak = 1100.469 ; gain = 782.129
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------+------------+----------+
+|      |RTL Partition          |Replication |Instances |
++------+-----------------------+------------+----------+
+|1     |MIPS_single_cycle__GC0 |           1|      1032|
++------+-----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:03 ; elapsed = 00:02:36 . Memory (MB): peak = 1100.469 ; gain = 782.129
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:04 ; elapsed = 00:02:37 . Memory (MB): peak = 1100.469 ; gain = 782.129
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:04 ; elapsed = 00:02:37 . Memory (MB): peak = 1100.469 ; gain = 782.129
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:04 ; elapsed = 00:02:37 . Memory (MB): peak = 1100.469 ; gain = 782.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:04 ; elapsed = 00:02:37 . Memory (MB): peak = 1100.469 ; gain = 782.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:04 ; elapsed = 00:02:37 . Memory (MB): peak = 1100.469 ; gain = 782.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:04 ; elapsed = 00:02:37 . Memory (MB): peak = 1100.469 ; gain = 782.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |FDRE |  1024|
+|3     |IBUF |     1|
+|4     |OBUF |     4|
++------+-----+------+
+
+Report Instance Areas: 
++------+-----------+--------------+------+
+|      |Instance   |Module        |Cells |
++------+-----------+--------------+------+
+|1     |top        |              |  1030|
+|2     |  Reg_file |register_file |  1024|
++------+-----------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:04 ; elapsed = 00:02:37 . Memory (MB): peak = 1100.469 ; gain = 782.129
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:44 ; elapsed = 00:02:24 . Memory (MB): peak = 1100.469 ; gain = 357.754
+Synthesis Optimization Complete : Time (s): cpu = 00:02:04 ; elapsed = 00:02:38 . Memory (MB): peak = 1100.469 ; gain = 782.129
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'MIPS_single_cycle' is not ideal for floorplanning, since the cellview 'register_file' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+272 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:05 ; elapsed = 00:02:41 . Memory (MB): peak = 1100.469 ; gain = 795.008
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'F:/CompArch/Vivado/Single_Cycle_Session1/Single_Cycle_Session1.runs/synth_1/MIPS_single_cycle.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file MIPS_single_cycle_utilization_synth.rpt -pb MIPS_single_cycle_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1100.469 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Oct  8 17:59:40 2026...
